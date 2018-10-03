@@ -1,4 +1,5 @@
 import serial, time
+import datetime
 import smbus
 import math
 import RPi.GPIO as GPIO
@@ -11,12 +12,9 @@ ser = serial.Serial('/dev/ttyUSB0',  9600, timeout = 0)   #Open the serial port 
 ser.flush()
  
 class GPS:
-    #The GPS module used is a Grove GPS module http://www.seeedstudio.com/depot/Grove-GPS-p-959.html
     inp=[]
-    # Refer to SIM28 NMEA spec file https://raw.githubusercontent.com/SeeedDocument/Grove-GPS/master/res/SIM28_DATA_File.zip
     GGA=[]
  
-    #Read data from the GPS
     def read(self):
         while True:
             GPS.inp=ser.readline()
@@ -30,7 +28,7 @@ class GPS:
             print ""
         GPS.GGA=GPS.inp.split(",")   #Split the stream into individual parts
         return [GPS.GGA]
- 
+
     #Split the data into individual elements
     def vals(self):
         time=GPS.GGA[1]
@@ -42,26 +40,31 @@ class GPS:
         sats=GPS.GGA[7]
         alt=GPS.GGA[9]
         return [time,fix,sats,alt,lat,lat_ns,long,long_ew]
- 
+
 g=GPS()
 ind=0
-db = MySQLdb.connect (host = "localhost", user = "root" , passwd = "0000" , db = "pi")
-while True:
+db = MySQLdb.connect (host = "163.22.17.251", user = "beebox" , passwd = "beebox1234" , db = "pi" )
+count = 0
+while (count < 3):
+    count = count + 1
     try:
-        x=g.read()  #Read from GPS
-        [t,fix,sats,alt,lat,lat_ns,long,long_ew]=g.vals() #Get the individial values
-        print "Time:",t,"Fix status:",fix,"Sats in view:",sats,"Altitude",alt,"Lat:",lat,lat_ns,"Long:",long,long_ew
-        time.sleep(2)
-		# 執行SQL statement
+        x=g.read()
+        [t,fix,sats,alt,lat,lat_ns,long,long_ew]=g.vals()
+        if not lat or not long:
+            lat=0
+            long=0
+        else:
+            lat=float(lat)/100
+            long=float(long)/100
+	print "Time:",datetime.datetime.now(),"Fix status:",fix,"Sats in view:",sats,"Altitude",alt,"Lat:",lat,lat_ns,"Long:",long,long_ew
         cursor = db.cursor()
-        cursor.execute("INSERT INTO gps(longitude,latitude)VALUES ('%f','%f')" % (lat,long))
+        cursor.execute("INSERT INTO GPS(Time,Longitude,Latitude)VALUES ('%s','%s','%s')" % (datetime.datetime.now(),lat,long))
         db.commit()
-		db.close()
-	except MySQLdb.Error as e:
+#        db.close()
+    except MySQLdb.Error as e:
         print "Error %d: %s" % (e.args[0], e.args[1])
     except IndexError:
         print "Unable to read"
     except KeyboardInterrupt:
         print "Exiting"
         sys.exit(0)
-
