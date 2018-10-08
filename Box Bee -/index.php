@@ -30,6 +30,9 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <?php 
+      include 'php/mysql.php' ;
+    ?>
     <!-- Side Navbar -->
     <nav class="side-navbar">
       <div class="side-navbar-wrapper">
@@ -146,7 +149,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-bill"></i></div>
                 <div class="name"><strong class="text-uppercase">衛星定位</strong><span>經緯度</span>
-                  <div class="count-number">(123,321)</div>
+                  <div class="count-number"><?php echo "($Lo,$La)" ?></div>
                 </div>
               </div>
             </div>
@@ -166,7 +169,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
                 <div class="name"><strong class="text-uppercase">溫度</strong><span>攝氏</span>
-                  <div class="count-number">26</div>
+                  <div class="count-number"><?php echo "$Tp °C" ?></div>
                 </div>
               </div>
             </div>
@@ -175,7 +178,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-padnote"></i></div>
                 <div class="name"><strong class="text-uppercase">濕度</strong><span>百分比</span>
-                  <div class="count-number">400</div>
+                  <div class="count-number"><?php echo "$Hu %" ?></div>
                 </div>
               </div>
             </div>
