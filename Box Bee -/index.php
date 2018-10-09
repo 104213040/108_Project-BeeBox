@@ -28,6 +28,12 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <style>
+      /* #gmap_canvas{
+          width:50%;
+          height:20em;
+      } */
+    </style>
   </head>
   <body>
     <?php 
@@ -52,7 +58,7 @@
             <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
             <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
-            <li><a href="tables.html"> <i class="icon-grid"></i>Tables                             </a></li>
+            <li><a href="php/tables.php"> <i class="icon-grid"></i>Tables                             </a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="#">Page</a></li>
@@ -158,7 +164,6 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-list"></i></div>
                 <div class="name"><strong class="text-uppercase">地圖顯示</strong><span>上次更新時間</span>
-                  <div class="count-number">92</div>
                 </div>
               </div>
             </div>
@@ -200,55 +205,11 @@
           <div class="row d-flex align-items-md-stretch">
             <!-- Google map-->
 
-            <div class="col-lg-3 col-md-6">
-              <div class="card to-do">
+            <div class="col-lg-9 col-md-6">
                 <h2 class="display h4">Google map</h2>
-                <p>test beebox location</p>
-                <ul class="check-lists list-unstyled">
-                  <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
-                </ul>
-              </div>
-            </div>
-            <!-- To Do List-->
-            <div class="col-lg-3 col-md-6">
-              <div class="card to-do">
-                <h2 class="display h4">To do List</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <ul class="check-lists list-unstyled">
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">
-                    <label for="list-1">Similique sunt in culpa qui officia</label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">
-                    <label for="list-2">Ed ut perspiciatis unde omnis iste</label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">
-                    <label for="list-3">At vero eos et accusamus et iusto </label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">
-                    <label for="list-4">Explicabo Nemo ipsam voluptatem</label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">
-                    <label for="list-5">Similique sunt in culpa qui officia</label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">
-                    <label for="list-6">At vero eos et accusamus et iusto </label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-7" name="list-7" class="form-control-custom">
-                    <label for="list-7">Similique sunt in culpa qui officia</label>
-                  </li>
-                  <li class="d-flex align-items-center"> 
-                    <input type="checkbox" id="list-8" name="list-8" class="form-control-custom">
-                    <label for="list-8">Ed ut perspiciatis unde omnis iste</label>
-                  </li>
-                </ul>
-              </div>
+                  <div id="gmap_canvas">
+                   
+                  </div>
             </div>
             <!-- Pie Chart-->
             <div class="col-lg-3 col-md-6">
@@ -497,5 +458,8 @@
     <script src="js/charts-home.js"></script>
     <!-- Main File-->
     <script src="js/front.js"></script>
+    <!-- googlemap -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false"></script>
+    <script src="js/gmap.js"></script>
   </body>
 </html>
