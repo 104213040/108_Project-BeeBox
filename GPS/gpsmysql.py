@@ -56,7 +56,7 @@ while (count < 3):
         else:
             lat=float(lat)/100
             long=float(long)/100
-	print "Time:",datetime.datetime.now(),"Fix status:",fix,"Sats in view:",sats,"Altitude",alt,"Lat:",lat,lat_ns,"Long:",long,long_ew
+	    print "Time:",datetime.datetime.now(),"Fix status:",fix,"Sats in view:",sats,"Altitude",alt,"Lat:",lat,lat_ns,"Long:",long,long_ew
         cursor = db.cursor()
         cursor.execute("INSERT INTO GPS(Time,Longitude,Latitude)VALUES ('%s','%s','%s')" % (datetime.datetime.now(),lat,long))
         db.commit()
