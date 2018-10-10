@@ -465,7 +465,7 @@
         /*地圖參數相關設定 Start*/
         var Options = {
             zoom: 14, /*縮放比例*/
-            center: new google.maps.LatLng(<?php echo $Lo?>,<?php echo $La?>) /*所查詢位置的經緯度位置*/
+            center: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>) /*所查詢位置的經緯度位置*/
         };
         
         map = new google.maps.Map(document.getElementById("gmap_canvas"), Options);
@@ -484,7 +484,7 @@
         
           marker = new google.maps.Marker({
             map: map,
-            position: new google.maps.LatLng(<?php echo $Lo?>,<?php echo $La?>), /*圖標經緯度位置*/
+            position: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>), /*圖標經緯度位置*/
             icon: image
         });
         /*自行設定圖標 End*/
