@@ -12,8 +12,9 @@
     $gps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 1';
     $GPS = mysqli_query($link,$gps_sql);
     while ($data = mysqli_fetch_array($GPS)){
-      $Lo= $data['Longitude'];
-      $La= $data['Latitude'];
+      $time = $data['Time'];
+      $Lo = $data['Longitude'];
+      $La = $data['Latitude'];
       // echo "<font color='blue'>{$data['Longitude']}</font>";
       // return $data;
     }  
@@ -28,7 +29,7 @@
     }  
 
     //更新時間
-    $now=time();
+    $now = time();
     $today = date("g:i a, F j, Y",$now);
 
     
