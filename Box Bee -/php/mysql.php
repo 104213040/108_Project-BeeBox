@@ -29,9 +29,7 @@
       // echo "<font color='blue'>{$data['Longitude']}</font>";
       // return $data;
     }	
-    
-	
-    
+
     //抓溫溼度最後一筆
     $tnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 1';
     $TNH = mysqli_query($link,$tnh_sql);
@@ -44,5 +42,4 @@
     $now = time();
     $today = date("g:i a, F j, Y",$now);
 
-    
 ?>

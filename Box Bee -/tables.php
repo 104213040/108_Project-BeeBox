@@ -286,10 +286,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">EX. 1</th>
-                          <td>2018-09-06 16:22:40</td>
-                          <td>29</td>
-                          <td>72</td>
+                          <td><?php echo "$time " ?></td>
+                          <td><?php echo "$Tp " ?></td>
+                          <td><?php echo "$Hu " ?></td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
@@ -320,7 +319,6 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>流水號<br> Serial Number</th>
                           <th>日期時間<br> Time</th>
                           <th>經度<br> Longitude</th>
                           <th>緯度<br> Latitude</th>
@@ -328,16 +326,13 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">EX. 1</th>
-                          <td>2018-09-06 16:22:40</td>
-                          <td>120.483</td>
-                          <td>24.0036</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
                           <td><?php echo "$time " ?></td>
                           <td><?php echo "$Lo " ?></td>
                           <td><?php echo "$La " ?></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          
                         </tr>
                         <tr>
                           <th scope="row">3</th>
