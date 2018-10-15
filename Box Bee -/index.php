@@ -55,7 +55,7 @@
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
+            <li><a href="index.php"> <i class="icon-home"></i>Home                             </a></li>
             <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
             <li><a href="php/tables.php"> <i class="icon-grid"></i>Tables                             </a></li>
@@ -90,10 +90,10 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
-                  <div class="brand-text d-none d-md-inline-block"><span>Beebox &nbsp;</span><strong class="text-primary">Dashboard</strong></div></a></div>
+                  <div class="brand-text d-none d-md-inline-block"><span>Dashboard &nbsp;</span><strong class="text-primary">Beebox</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Notifications dropdown-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">0</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item"> 
                         <div class="notification d-flex justify-content-between">
@@ -119,7 +119,7 @@
                   </ul>
                 </li>
                 <!-- Messages dropdown-->
-                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">0</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
                         <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
@@ -159,18 +159,21 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="row">
             <!--MAP-->
             <div class="col-xl-8 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-list"></i></div>
                 <div class="name"><strong class="text-uppercase">地圖顯示</strong><span>上次更新時間</span>
+                  <div class="count-number"><?php echo "$time " ?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row"><!-- 俊佑奕良的部分-->
             <!--溫度-->
-            <div class="col-xl-4 col-md-4 col-6">
+            <div class="col-xl-4 col-md-2 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
                 <div class="name"><strong class="text-uppercase">溫度</strong><span>攝氏</span>
@@ -192,7 +195,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-bill"></i></div>
                 <div class="name"><strong class="text-uppercase">中央氣象局</strong><span>Last 2 days</span>
-                  <div class="count-number">123</div>
+                  <div class="count-number"></div>
                 </div>
               </div>
             </div>
@@ -207,6 +210,7 @@
 
             <div class="col-lg-9 col-md-6">
                 <h2 class="display h4">Google map</h2>
+                <p> 蜂箱所在位置</p>
                   <div id="gmap_canvas">
                    
                   </div>
@@ -214,20 +218,20 @@
             <!-- Pie Chart-->
             <div class="col-lg-3 col-md-6">
               <div class="card project-progress">
-                <h2 class="display h4">Project Beta progress</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h2 class="display h4"></h2>
+                <p></p>
                 <div class="pie-chart">
-                  <canvas id="pieChart" width="300" height="300"> </canvas>
+                  <canvas id="" width="" height=""></canvas>
                 </div>
               </div>
             </div>
             <!-- Line Chart -->
             <div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
               <div class="card sales-report">
-                <h2 class="display h4">溫溼度變化</h2>
-                <p> 備註</p>
+                <h2 class="display h4"></h2>
+                <p></p>
                 <div class="line-chart">
-                  <canvas id="lineCahrt"></canvas>
+                  <canvas id=""></canvas>
                 </div>
               </div>
             </div>
@@ -460,42 +464,6 @@
     <script src="js/front.js"></script>
     <!-- googlemap -->
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false"></script>
-    <script type="text/javascript">
-	function init_map() {
-        /*地圖參數相關設定 Start*/
-        var Options = {
-            zoom: 14, /*縮放比例*/
-            center: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>) /*所查詢位置的經緯度位置*/
-        };
-        
-        map = new google.maps.Map(document.getElementById("gmap_canvas"), Options);
-        /*地圖參數相關設定 End*/
-        
-        /*自行設定圖標 Start*/
-        var image = {
-            url: 'https://goo.gl/images/WgrRgR', /*自定圖標檔案位置或網址*/
-            // This marker is 20 pixels wide by 32 pixels high.
-            size: new google.maps.Size(20, 32), /*自定圖標大小*/
-            // The origin for this image is (0, 0).
-            origin: new google.maps.Point(0, 0),
-            // The anchor for this image is the base of the flagpole at (0, 32).
-            anchor: new google.maps.Point(0, 32)
-          };
-        
-          marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>), /*圖標經緯度位置*/
-            icon: image
-        });
-        /*自行設定圖標 End*/
-        
-        /*所查詢位置詳細資料 Start*/
-        infowindow = new google.maps.InfoWindow({content:"<?php echo $Lo?>,<?php echo $La?>"});
-        infowindow.open(map, marker);
-        /*所查詢位置詳細資料 End*/
-    }
-    google.maps.event.addDomListener(window, 'load', init_map);
-</script>
-
+    <script src="js/gmap.js"></script>
   </body>
 </html>
