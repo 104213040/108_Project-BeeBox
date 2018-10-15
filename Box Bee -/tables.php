@@ -49,7 +49,7 @@
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.php"> <i class="icon-home"></i>Home                             </a></li>
+            <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
             
             <!--
             <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
