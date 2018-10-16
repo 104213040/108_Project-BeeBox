@@ -18,7 +18,9 @@
       // echo "<font color='blue'>{$data['Longitude']}</font>";
       // return $data;
     }
-
+    $Lo= round(($Lo-($Lo%1000))*100/60+($Lo%1000),3);
+	$La=round(($La-($La%1000))*100/60+($La%1000),3);
+	
     //抓GPS最後十筆
     $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 10';
     $tbGPS = mysqli_query($link,$tbgps_sql);

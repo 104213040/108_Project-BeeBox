@@ -238,8 +238,8 @@
                           { $rs=mysqli_fetch_row($tbGPS);
                         ?><tr>
                         <td><?php echo $rs[1]?></td>
-                        <td><?php echo $rs[2]?></td>
-                        <td><?php echo $rs[3]?></td>
+                        <td><?php $Lo= round(($rs[2]-($rs[2]%1000))*100/60+($rs[2]%1000),3);echo $Lo?></td>
+                        <td><?php $La= round(($rs[3]-($rs[3]%1000))*100/60+($rs[3]%1000),3);echo $La?></td>
                         </tr>
                         <?php }?>
                       </tbody>
