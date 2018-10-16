@@ -43,20 +43,20 @@
             <h2 class="h5">Box BEE</h2><span>草屯時代養蜂場</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
-          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">B</strong></a></div>
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">B</strong></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
+            <li><a href="index.php"> <i class="icon-home"></i>Home                             </a></li>
             
             <!--
             <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
             -->
             
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
-            <li class="active"><a href="tables.html"> <i class="icon-grid"></i>Tables                             </a></li>
+            <li class="active"><a href="tables.php"> <i class="icon-grid"></i>Tables                             </a></li>
             
             <!--
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
