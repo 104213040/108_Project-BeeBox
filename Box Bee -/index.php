@@ -45,7 +45,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="img/bee-animated-gif-17.gif" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="img/BTlogo.png" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Box BEE</h2><span>草屯時代養蜂場</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
