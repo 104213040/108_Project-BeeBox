@@ -66,11 +66,15 @@
                 <li><a href="#">Page</a></li>
               </ul>
             </li>
+
             <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li>
+            <!--
             <li> <a href="#"> <i class="icon-mail"></i>Demo
                 <div class="badge badge-warning">6 New</div></a></li>
           </ul>
         </div>
+        -->
+        <!--
         <div class="admin-menu">
           <h5 class="sidenav-heading">Second menu</h5>
           <ul id="side-admin-menu" class="side-menu list-unstyled">
@@ -81,6 +85,7 @@
             <li> <a href=""> <i class="icon-picture"> </i>Demo</a></li>
           </ul>
         </div>
+        -->
       </div>
     </nav>
     <div class="page">
