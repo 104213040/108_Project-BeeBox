@@ -19,17 +19,14 @@
       // return $data;
     }
 
-    //抓GPS最後一筆
-    $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 1,1';
+    //抓GPS最後十筆
+    $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 10';
     $tbGPS = mysqli_query($link,$tbgps_sql);
-    while ($data = mysqli_fetch_array($tbGPS)){
-      $tbtime = $data['Time'];
-      $tbLo = $data['Longitude'];
-      $tbLa = $data['Latitude'];
-      // echo "<font color='blue'>{$data['Longitude']}</font>";
-      // return $data;
-    }	
 
+    //抓溫溼度最後十筆
+    $tbtnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 10';
+    $tbtnh = mysqli_query($link,$tbtnh_sql);
+    
     //抓溫溼度最後一筆
     $tnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 1';
     $TNH = mysqli_query($link,$tnh_sql);

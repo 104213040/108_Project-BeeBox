@@ -39,7 +39,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="img/bee-animated-gif-17.gif" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="img/BTlogo.png" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Box BEE</h2><span>草屯時代養蜂場</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -182,92 +182,7 @@
             <h1 class="h3 display">Beebox Database            </h1>
           </header>
           <div class="row">
-            <!--
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Basic Table</h4>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
-            <!--
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Striped Table</h4>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
+
             <div class="col-lg-6">
               <div class="card">
                 <div class="card-header">
@@ -278,30 +193,22 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>流水號<br> Serial Number</th>
                           <th>日期時間<br> Time</th>
                           <th>溫度<br> Temperature</th>
                           <th>濕度<br> Humidity</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td><?php echo "$time " ?></td>
-                          <td><?php echo "$Tp " ?></td>
-                          <td><?php echo "$Hu " ?></td>
+                        <?php
+                          include 'php/mysql.php';
+                          for($i=1;$i<=mysqli_num_rows($tbtnh);$i++)
+                            { $rs=mysqli_fetch_row($tbtnh);
+                        ?><tr>
+                        <td><?php echo $rs[1]?></td>
+                        <td><?php echo $rs[2]?></td>
+                        <td><?php echo $rs[3]?></td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>──</td>
-                          <td>──</td>
-                          <td>──</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>──</td>
-                          <td>──</td>
-                          <td>──</td>
-                        </tr>
+                        <?php }?>
                       </tbody>
                     </table>
                   </div>
@@ -325,88 +232,22 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td><?php echo "$time " ?></td>
-                          <td><?php echo "$Lo " ?></td>
-                          <td><?php echo "$La " ?></td>
+                      <?php
+                        // include 'php/mysql.php';
+                        for($i=1;$i<=mysqli_num_rows($tbGPS);$i++)
+                          { $rs=mysqli_fetch_row($tbGPS);
+                        ?><tr>
+                        <td><?php echo $rs[1]?></td>
+                        <td><?php echo $rs[2]?></td>
+                        <td><?php echo $rs[3]?></td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>──</td>
-                          <td>──</td>
-                          <td>──</td>
-                        </tr>
+                        <?php }?>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            <!--
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Compact Table</h4>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter      </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">6</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter       </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </section>
