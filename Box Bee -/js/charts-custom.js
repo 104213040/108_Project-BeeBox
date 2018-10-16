@@ -66,7 +66,7 @@ $(document).ready(function () {
             ]
         }
     });
-
+/*
     var pieChartExample = new Chart(PIECHARTEXMPLE, {
         type: 'doughnut',
         data: {
@@ -217,6 +217,6 @@ $(document).ready(function () {
         responsive: true
     };
 
-
+*/
 
 });
