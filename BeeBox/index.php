@@ -99,23 +99,21 @@
 		</div>
 	</nav>
 	<div class="container-wrap">
-
 		<div id="fh5co-counter" class="fh5co-counters">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center animate-box">
-					<p>目前顯示
-					<select id="selectbox" data-selected="">
-  						<option value="" selected="selected">box1</option>
-  						<option value="1">box2</option>
-					</select>
-					</p>
-
-					<p>最後更新時間: <?php echo $time?></p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="row">
+				<!-- 左半邊數據顯示 -->
+				<div class="col-md-6">
+					<!-- 蜂箱選擇 -->
+					<div class="col-md-12 text-center animate-box">
+						<p>目前顯示
+							<select id="selectbox" data-selected="">
+								<option value="" selected="selected">box1</option>
+								<option value="1">box2</option>
+							</select>
+						</p>
+					</div>
+					<!-- 溫溼度及狀態 -->
+					<div class="col-md-12 row">
 						<div class="col-md-4 text-center">
 							<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo $Tp?>" data-speed="4000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">溫度°C</span>
@@ -129,18 +127,27 @@
 							<span class="fh5co-counter-label">蜜蜂狀態</span>
 						</div>
 					</div>
+					<div class="col-md-12">
+						<div class="text-center animate-box">
+						<p>最後更新時間: <?php echo $time?></p>
+						</div>
+					</div>
+				</div>
+				<!-- 右半邊 -->
+				<div class="col-md-6" >
+					<div id="gmap_canvas"></div>
 				</div>
 			</div>
 		</div>
 
-		<div id="fh5co-blog" class="blog-flex">
-			<div class="featured-blog">
-				<div class="desc-t" id="gmap_canvas">
+		<div id="fh5co-blog" class="blog-flex row">
+			<div class="featured-blog col-md-4">
+				<div class="desc-t " >
 				</div>
 			</div>
-			<div class="blog-entry fh5co-light-grey">
-				<div class="row animate-box">
-					<div class="col-md-12">
+			<div class="blog-entry fh5co-light-grey col-md-3">
+				<div class=" animate-box">
+					<div>
 						<p>目前顯示
 						<select id="selectbox" data-selected="">
 							<option value="" selected="selected">box1</option>
