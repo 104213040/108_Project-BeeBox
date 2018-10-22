@@ -82,12 +82,13 @@
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
 							<li class="active"><a href="#Latest">最新數據</a></li>
-							<li class="has-dropdown">
-                                <a href="#" >歷史資料</a>
+							<li class="has-dropdown"><a href="history.php" >歷史資料</a>
+                <!--
 								<ul class="dropdown">
-                                    <li><a href="#TNH">溫溼度</a></li>
+                  <li><a href="#TNH">溫溼度</a></li>
 									<li><a href="#">聲音</a></li>
 								</ul>
+								-->
 							</li>
                             <li><a href="aboutus.html">關於我們</a></li>
 						</ul>
