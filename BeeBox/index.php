@@ -89,7 +89,7 @@
 									<li><a href="#">聲音</a></li>
 								</ul>
 							</li>
-                            <li><a href="work.html">關於我們</a></li>
+                            <li><a href="aboutus.html">關於我們</a></li>
 							<li><a href="about.html">聯絡我們</a></li>
 						</ul>
 					</div>
