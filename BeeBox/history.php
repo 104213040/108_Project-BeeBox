@@ -102,46 +102,103 @@
 
 
 
-</div><!-- END container-wrap -->
-
-	<div class="container-wrap" id="TNH">
+<div class="container-wrap" id="TNH">
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
-
+    
 		<div class="col-md-6 col-md-push-1">
-
-		<h4>溫溼度折線圖</h4>
-		<div class="card-body">
-	  <canvas id="lineChartExample"></canvas>
-		</div>
+		    <h4>溫溼度折線圖</h4>
+		    <div class="card-body">
+	            <canvas id="lineChartExample"></canvas>
+		    </div>
 		</div>
 
 		<div class="col-md-5 col-md-push-1">
-		<table class="table table-striped table-hover">
-		<thead>
-		<tr>
-		<th>日期時間<br> Time</th>
-		<th>溫度<br> Temperature</th>
-		<th>濕度<br> Humidity</th>
-		</tr>
-		</thead>
-		<tbody>
-		<?php
-		    for($i=1;$i<=mysqli_num_rows($tbtnh);$i++)
-				    { $rs=mysqli_fetch_row($tbtnh);
-    ?><tr>
-        <td><?php echo $rs[1]?></td>
-        <td><?php echo $rs[2]?></td>
-        <td><?php echo $rs[3]?></td>
-        </tr>
-			<?php }?>
-      </tbody>
-    </table>
-					</div>
-				</div>
-	   	</footer>
-		</div><!-- END container-wrap -->
+		    <table class="table table-striped table-hover">
+		        <thead>
+		        <tr>
+		        <th>日期時間<br> Time</th>
+		        <th>溫度<br> Temperature</th>
+	        	<th>濕度<br> Humidity</th>
+	        	</tr>
+	        	</thead>
+	        	<tbody>
+		        <?php
+				for($i=1;$i<=mysqli_num_rows($tbtnh);$i++){ 
+				    $rs=mysqli_fetch_row($tbtnh);?><tr>
+                <td><?php echo $rs[1]?></td>
+                <td><?php echo $rs[2]?></td>
+                <td><?php echo $rs[3]?></td>
+                </tr><?php } ?>
+            </tbody>
+            </table>
+	</div>
+	</div>
+	</footer>
+</div><!-- END container-wrap -->
 
+
+
+
+<div class="container-wrap" id="TNH">
+	<footer id="fh5co-footer" role="contentinfo">
+	<div class="row">
+    <div id="fh5co-work">
+			<div class="row">
+			<h4>聲音檔</h4>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/正常狀況.png);">
+						<div class="desc">
+							<h3>正常蜂箱</h3>
+							<span>09061629</span>
+						</div>
+					</a>
+					
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/假失王.png);">
+						<div class="desc">
+							<h3>假失王蜂箱</h3>
+							<span>09061632</span>
+						</div>
+					</a>
+					
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/正常狀況.png);">
+						<div class="desc">
+							<h3>正常蜂箱</h3>
+							<span>09061629</span>
+						</div>
+					</a>
+					
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/假失王.png);">
+						<div class="desc">
+							<h3>假失王蜂箱</h3>
+							<span>09061632</span>
+						</div>
+					</a>
+					
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
@@ -151,9 +208,12 @@
 
 				</div>
 			</div>
-		</footer>
-	</div><!-- END container-wrap -->
+		</div>
 	</div>
+    </div><!-- END container-wrap -->
+    </div>
+	</footer>
+</div><!-- END container-wrap -->
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>

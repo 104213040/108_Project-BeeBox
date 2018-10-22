@@ -144,7 +144,7 @@
 
 
 	</div><!-- END container-wrap -->
-
+<!--
     <div class="container-wrap" id="TNH">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
@@ -186,8 +186,8 @@
 			</div>
 
 		</footer>
-	</div><!-- END container-wrap -->
-<!--
+	</div><!-- END container-wrap
+
 	<div class="container-wrap" id="AboutUs">
 		<aside id="fh5co-hero">
 			<div class="flexslider">
@@ -354,7 +354,7 @@
     <script src="js/selectbar.js"></script>
 
     <!-- googlemap & tnh chart-->
-	<script src="js/Chart.min.js"></script>
+	<!--<script src="js/Chart.min.js"></script>-->
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false"></script>
     <script type="text/javascript">
 		/*地圖*/
@@ -392,7 +392,7 @@
 		}
 		google.maps.event.addDomListener(window, 'load', init_map);
 
-		/*溫溼度*/
+		/*溫溼度
 		$(document).ready(
 		function () { 'use strict';
 			var brandPrimary = 'rgba(51, 179, 90, 1)';
@@ -470,6 +470,7 @@
 		$(function(){
 			menuScroll();
 		});
+		*/
 
 	</script>
 
