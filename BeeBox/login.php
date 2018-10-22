@@ -1,10 +1,15 @@
 <?php
 session_start();
-require("mysql.php");
+$host = '163.22.17.251';
+$user = 'beebox';
+$password = 'beebox1234';
+$database = 'pi';
+$link = mysqli_connect($host, $user, $password, $database );
+
 $userName = $_POST['id'];
 $passWord = $_POST['pwd'];
 
-$userName = mysqli_real_escape_string($link,$userName); 
+$userName = mysqli_real_escape_string($link,$userName);
 
 $sql = "SELECT password, id FROM user WHERE loginID='$userName'";
 if ($result = mysqli_query($link,$sql)) {
@@ -14,8 +19,8 @@ if ($result = mysqli_query($link,$sql)) {
 			$_SESSION['uID'] = $row['id'];
 
 			echo "login Success!!";
+			header("Location: https://www.google.com.tw/?gws_rd=ssl");
 		} else {
-
 			echo "Invalid Username or Password - Please try again <br />";
 		}
 	}
