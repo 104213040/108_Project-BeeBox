@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>BEEBOX</title>
+	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -81,7 +82,7 @@
 					</div>
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
-							<li ><a href="#Latest">最新數據</a></li>
+							<li class="active"><a href="#Latest">最新數據</a></li>
 							<li class="has-dropdown">
                                 <a href="#" >歷史資料</a>
 								<ul class="dropdown">
