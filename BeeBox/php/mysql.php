@@ -21,6 +21,13 @@
     $Lo= round(($Lo-($Lo%1000))*100/60+($Lo%1000),3);
 	$La=round(($La-($La%1000))*100/60+($La%1000),3);
 
+	//抓溫溼度最後一筆
+    $tnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 1';
+    $TNH = mysqli_query($link,$tnh_sql);
+    while ($data = mysqli_fetch_array($TNH)){
+      $Tp = $data['Temperature'];
+      $Hu = $data['Humidity'];
+    }
     //抓GPS最後十筆
     $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 10';
     $tbGPS = mysqli_query($link,$tbgps_sql);
@@ -29,13 +36,13 @@
     $tbtnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 10';
     $tbtnh = mysqli_query($link,$tbtnh_sql);
 
-    //抓溫溼度最後一筆
-    $tnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 1';
-    $TNH = mysqli_query($link,$tnh_sql);
-    while ($data = mysqli_fetch_array($TNH)){
-      $Tp = $data['Temperature'];
-      $Hu = $data['Humidity'];
-    }
+	//抓溫度最後十筆
+    $tbt_sql = 'SELECT `Temperature` FROM `TNH` ORDER BY `Time` limit 10';
+    $tbt = mysqli_query($link,$tbt_sql);
+
+	//抓濕度最後十筆
+    $tbh_sql = 'SELECT `Humidity` FROM `TNH` ORDER BY `Time` limit 10';
+    $tbh = mysqli_query($link,$tbh_sql);
 
     //更新時間
     $now = time();

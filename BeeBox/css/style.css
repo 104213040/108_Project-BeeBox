@@ -828,7 +828,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .blog-flex .blog-entry h2 {
   display: block;
-  font-size: 13px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -851,7 +851,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 10px;
 }
 .blog-flex .blog-entry .blog-post .desc span {
-  font-size: 13px;
+  font-size: 18px;
   color: #b3b3b3;
 }
 .blog-flex .blog-entry .blog-post .img {
