@@ -67,7 +67,8 @@
 	</head>
 	<body>
 		<?php
-			include 'php/mysql.php' ;
+		    $database = 'pi';
+			include 'mysql.php' ;
 		?>
 	<div class="fh5co-loader"></div>
 
