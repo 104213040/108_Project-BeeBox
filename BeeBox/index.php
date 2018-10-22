@@ -66,7 +66,9 @@
 
 	</head>
 	<body>
-	
+	<?php
+		include 'mysql.php' ;
+	?>
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
@@ -106,17 +108,13 @@
 					<div class="col-md-12 text-center animate-box">
 						<p>目前顯示
 							<select id="selectbox" data-selected="">
-								<option value="<?php
-								$database = 'pi';?>" selected="selected">box1</option>
-								<option value="<?php
-								$database = 'box2';?>">box2</option>
+								<option value="" selected="selected">box1</option>
+								<option value="1">box2</option>
 								
 							</select>
 						</p>
 					</div>
-					<?php
-					include 'mysql.php' ;
-					?>
+					
 					<!-- 溫溼度及狀態 -->
 					<div class="col-md-12 row">
 						<div class="col-md-4 text-center">
