@@ -145,58 +145,31 @@
 	<div class="row">
     <div id="fh5co-work">
 			<div class="row">
-			<h4>聲音檔</h4>
+			<h3>聲音檔</h3>
 				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/正常狀況.png);">
-						<div class="desc">
-							<h3>正常蜂箱</h3>
-							<span>09061629</span>
-						</div>
-					</a>
-					
+				<h4>正常蜂箱</h4>
+				<span>09061629</span>
+				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/假失王.png);">
-						<div class="desc">
-							<h3>假失王蜂箱</h3>
-							<span>09061632</span>
-						</div>
-					</a>
-					
+				<h4>假失王蜂箱</h4>
+				<span>09061629</span>
+				<a class="work" style="background-image: url(images/假失王.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
+				<h4>正常蜂箱</h4>
+				<span>09061629</span>
+				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/正常狀況.png);">
-						<div class="desc">
-							<h3>正常蜂箱</h3>
-							<span>09061629</span>
-						</div>
-					</a>
-					
+				<h4>正常蜂箱</h4>
+				<span>09061629</span>
+				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/假失王.png);">
-						<div class="desc">
-							<h3>假失王蜂箱</h3>
-							<span>09061632</span>
-						</div>
-					</a>
-					
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
+				<h4>正常蜂箱</h4>
+				<span>09061629</span>
+				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				
 
