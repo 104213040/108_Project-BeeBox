@@ -3,8 +3,7 @@
     $host = '163.22.17.251';
     $user = 'beebox';
     $password = 'beebox1234';
-    //$database = 'pi'; // 預設使用的資料庫名稱
-    header("index.php"); 
+    $database = 'pi'; // 預設使用的資料庫名稱
 	$link = mysqli_connect($host, $user, $password, $database );
     $sql  = 'SELECT TOP 1* FROM `TEST` ';
     $Lo_result = mysqli_query($link,$sql);
