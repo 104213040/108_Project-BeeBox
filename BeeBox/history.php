@@ -172,7 +172,11 @@
 				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				
-
+            </div>
+	</div>
+    </div><!-- END container-wrap -->
+	</footer>
+</div><!-- END container-wrap -->
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
@@ -181,12 +185,7 @@
 
 				</div>
 			</div>
-		</div>
-	</div>
-    </div><!-- END container-wrap -->
-    </div>
-	</footer>
-</div><!-- END container-wrap -->
+		
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
