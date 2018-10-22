@@ -9,12 +9,12 @@
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
 
-	<!-- 
+	<!--
 	//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE 
+	FREE HTML5 TEMPLATE
 	DESIGNED & DEVELOPED by FreeHTML5.co
-		
+
 	Website: 		http://freehtml5.co/
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
@@ -36,7 +36,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -52,7 +52,7 @@
 
 	<!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- custom.css -->
     <link rel="stylesheet" href="css/custom.css">
 
@@ -67,23 +67,23 @@
 	<body>
 	<?php
 		include 'php/mysql.php' ;
-	?>	
+	?>
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container-wrap">
 			<div class="top-menu hivecolor">
 				<div class="row">
 					<div class="col-xs-6">
-                    
+
 						<div id="fh5co-logo"><a href="index.php"><img src="img/BTlogo.png" alt="person" class="img-fluid" /></a>草屯時代養蜂場</div>
 					</div>
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.php">最新數據</a></li>
 							<li class="has-dropdown">
-                                <a href="blog.html">歷史資料</a>
+                                <a href="history.html">歷史資料</a>
 								<ul class="dropdown">
                                     <li><a href="#">溫溼度</a></li>
 									<li><a href="#">聲音</a></li>
@@ -94,7 +94,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</nav>
@@ -227,13 +227,13 @@
 		</div>
 
 	</div><!-- END container-wrap -->
-	
+
     <div class="container-wrap">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
-				
+
 				<div class="col-md-6 col-md-push-1">
-				
+
 					<h4>溫溼度折線圖</h4>
 					  <div class="card-body">
                           <canvas id="lineChartExample"></canvas>
@@ -261,17 +261,17 @@
                         <?php }?>
                       </tbody>
                     </table>
-					
+
 				</div>
 
-				
+
 
 			</div>
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
 					<p>
@@ -331,7 +331,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
 					<p>
@@ -351,7 +351,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -370,9 +370,9 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	<!-- choose hive -->	
+	<!-- choose hive -->
     <script src="js/selectbar.js"></script>
-    
+
     <!-- googlemap & tnh chart-->
 	<script src="js/Chart.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false"></script>
@@ -411,7 +411,7 @@
         /*所查詢位置詳細資料 End*/
     }
     google.maps.event.addDomListener(window, 'load', init_map);
-	
+
 	/*溫溼度*/
 	$(document).ready(
 	function () { 'use strict';
@@ -471,10 +471,9 @@
                 ]
             }
         });
-	
+
     });
  </script>
 
 	</body>
 </html>
-
