@@ -81,7 +81,7 @@
 					</div>
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
-							<li ><a href="#Latest">最新數據</a></li>
+							<li class="active"><a href="#Latest">最新數據</a></li>
 							<li class="has-dropdown">
                                 <a href="#" >歷史資料</a>
 								<ul class="dropdown">
@@ -89,7 +89,7 @@
 									<li><a href="#">聲音</a></li>
 								</ul>
 							</li>
-                            <li><a href="#AboutUs">關於我們</a></li>
+                            <li><a href="aboutus.html">關於我們</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,11 +139,11 @@
 			</div>
 		</div>
 
-		
-		
+
+
 
 	</div><!-- END container-wrap -->
-	
+
     <div class="container-wrap" id="TNH">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
@@ -186,7 +186,7 @@
 
 		</footer>
 	</div><!-- END container-wrap -->
-
+<!--
 	<div class="container-wrap" id="AboutUs">
 		<aside id="fh5co-hero">
 			<div class="flexslider">
@@ -202,10 +202,10 @@
 			   				</div>
 			   			</div>
 			   		</div>
-			   	</li>		   	
+			   	</li>
 			  	</ul>
 		  	</div>
-		</aside>		
+		</aside>
 		<div id="fh5co-work">
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
@@ -258,8 +258,10 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- END container-wrap -->
-
+	</div>
+  -->
+	<!-- END container-wrap -->
+<!--
 
 	<div class="container-wrap" id="Footer">
 		<footer id="fh5co-footer" role="contentinfo">
@@ -301,13 +303,13 @@
 				</div>
 
 			</div>
-
+-->
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+						<small class="block">&copy; 2018 BeeTeam. All Rights Reserved.</small>
 					</p>
+					<!-- social media links
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -316,6 +318,7 @@
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
 					</p>
+				 -->
 				</div>
 			</div>
 		</footer>
@@ -323,7 +326,7 @@
 	</div>
 
 
-	
+
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
@@ -387,7 +390,7 @@
 			/*所查詢位置詳細資料 End*/
 		}
 		google.maps.event.addDomListener(window, 'load', init_map);
-		
+
 		/*溫溼度*/
 		$(document).ready(
 		function () { 'use strict';
@@ -447,7 +450,7 @@
 					]
 				}
 			});
-		
+
 		});
 
 
