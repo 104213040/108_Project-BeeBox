@@ -19,7 +19,7 @@ if ($result = mysqli_query($link,$sql)) {
 			$_SESSION['uID'] = $row['id'];
 
 			echo "login Success!!";
-			header("Location: https://www.google.com.tw/?gws_rd=ssl");
+			header("Location:index.php");
 		} else {
 			echo "Invalid Username or Password - Please try again <br />";
 		}
