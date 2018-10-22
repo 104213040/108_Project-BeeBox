@@ -71,7 +71,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+	<nav class="fh5co-nav" role="navigation" id="nav">
 		<div class="container-wrap">
 			<div class="top-menu hivecolor">
 				<div class="row">
@@ -81,16 +81,15 @@
 					</div>
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.php">最新數據</a></li>
+							<li ><a href="#Latest">最新數據</a></li>
 							<li class="has-dropdown">
-                                <a href="blog.html">歷史資料</a>
+                                <a href="#" >歷史資料</a>
 								<ul class="dropdown">
-                                    <li><a href="#">溫溼度</a></li>
+                                    <li><a href="#TNH">溫溼度</a></li>
 									<li><a href="#">聲音</a></li>
 								</ul>
 							</li>
-                            <li><a href="work.html">關於我們</a></li>
-							<li><a href="about.html">聯絡我們</a></li>
+                            <li><a href="#AboutUs">關於我們</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,7 +97,7 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-wrap">
+	<div class="container-wrap" id="Latest">
 		<div id="fh5co-counter" class="fh5co-counters">
 			<div class="row">
 				<!-- 左半邊數據顯示 -->
@@ -140,54 +139,7 @@
 			</div>
 		</div>
 
-		<div id="fh5co-blog" class="blog-flex row">
-			<div class="featured-blog col-md-4">
-				<div class="desc-t " >
-				</div>
-			</div>
-			<div class="blog-entry fh5co-light-grey col-md-3">
-				<div class=" animate-box">
-					<div>
-						<p>目前顯示
-						<select id="selectbox" data-selected="">
-							<option value="" selected="selected">box1</option>
-							<option value="1">box2</option>
-						</select>
-						</p>
-						<h2>最後更新時間:<?php echo $time?></h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 animate-box">
-						<a href="#" class="blog-post">
-							<span class="img" style="background-image: url(images/blog-2.jpg);"></span>
-							<div class="desc">
-								<h3>溫度</h3>
-								<span class="cat"><?php echo "$Tp °C" ?></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-12 animate-box">
-						<a href="#" class="blog-post">
-							<span class="img" style="background-image: url(images/blog-1.jpg);"></span>
-							<div class="desc">
-								<h3>濕度</h3>
-								<span class="cat"><?php echo "$Hu %" ?></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-12 animate-box">
-						<a href="#" class="blog-post">
-							<span class="img" style="background-image: url(images/blog-3.jpg);"></span>
-							<div class="desc">
-								<h3>蜜蜂狀態</h3>
-								<span class="cat">良好</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<div id="fh5co-services">
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
@@ -228,7 +180,7 @@
 
 	</div><!-- END container-wrap -->
 	
-    <div class="container-wrap">
+    <div class="container-wrap" id="TNH">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
 				
@@ -268,7 +220,7 @@
 
 			</div>
 
-			<div class="row copyright">
+			<div class="row copyright" id="tnh">
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
@@ -287,7 +239,7 @@
 		</footer>
 	</div><!-- END container-wrap -->
 
-	<div class="container-wrap">
+	<div class="container-wrap" id="Footer">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
 				<div class="col-md-3 fh5co-widget">
@@ -348,6 +300,80 @@
 	</div><!-- END container-wrap -->
 	</div>
 
+	<div class="container-wrap" id="AboutUs">
+		<aside id="fh5co-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url(images/img_bg_3.jpg);">
+			   		<div class="overlay-gradient"></div>
+		   			<div class="row">
+			   			<div class="col-md-6 col-md-offset-3 slider-text slider-text-bg">
+			   				<div class="slider-text-inner text-center">
+			   					<h1>國立暨南國際大學</h1>
+									<h2>資訊管理系</h2>
+										<h2>108 級專題組 / BEEBOX</h2>
+			   				</div>
+			   			</div>
+			   		</div>
+			   	</li>		   	
+			  	</ul>
+		  	</div>
+		</aside>		
+		<div id="fh5co-work">
+			<div class="row">
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-1.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-2.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Brading</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-4.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-5.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Brading</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-6.jpg);">
+						<div class="desc">
+							<h3>Project Name</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- END container-wrap -->
+
+	
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
@@ -377,103 +403,121 @@
 	<script src="js/Chart.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false"></script>
     <script type="text/javascript">
-	/*地圖*/
-	function init_map() {
-        /*地圖參數相關設定 Start*/
-        var Options = {
-            zoom: 14, /*縮放比例*/
-            center: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>) /*所查詢位置的經緯度位置*/
-        };
+		/*地圖*/
+		function init_map() {
+			/*地圖參數相關設定 Start*/
+			var Options = {
+				zoom: 14, /*縮放比例*/
+				center: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>) /*所查詢位置的經緯度位置*/
+			};
 
-        map = new google.maps.Map(document.getElementById("gmap_canvas"), Options);
-        /*地圖參數相關設定 End*/
+			map = new google.maps.Map(document.getElementById("gmap_canvas"), Options);
+			/*地圖參數相關設定 End*/
 
-        /*自行設定圖標 Start*/
-        var image = {
-            url: 'https://goo.gl/images/WgrRgR', /*自定圖標檔案位置或網址*/
-            // This marker is 20 pixels wide by 32 pixels high.
-            size: new google.maps.Size(20, 32), /*自定圖標大小*/
-            // The origin for this image is (0, 0).
-            origin: new google.maps.Point(0, 0),
-            // The anchor for this image is the base of the flagpole at (0, 32).
-            anchor: new google.maps.Point(0, 32)
-          };
-          marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>), /*圖標經緯度位置*/
-            icon: image
-        });
-        /*自行設定圖標 End*/
+			/*自行設定圖標 Start*/
+			var image = {
+				url: 'img/map_marker.png', /*自定圖標檔案位置或網址*/
+				// This marker is 20 pixels wide by 32 pixels high.
+				size: new google.maps.Size(50, 50), /*自定圖標大小*/
+				// The origin for this image is (0, 0).
+				origin: new google.maps.Point(0, 0),
+				// The anchor for this image is the base of the flagpole at (0, 32).
+				anchor: new google.maps.Point(0, 32)
+			};
+			marker = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(<?php echo $La?>,<?php echo $Lo?>), /*圖標經緯度位置*/
+				icon: image
+			});
+			/*自行設定圖標 End*/
 
-        /*所查詢位置詳細資料 Start*/
-        infowindow = new google.maps.InfoWindow({content:"<?php echo $Lo?>,<?php echo $La?>"});
-        infowindow.open(map, marker);
-        /*所查詢位置詳細資料 End*/
-    }
-    google.maps.event.addDomListener(window, 'load', init_map);
-	
-	/*溫溼度*/
-	$(document).ready(
-	function () { 'use strict';
-	    var brandPrimary = 'rgba(51, 179, 90, 1)';
-		var LINECHARTEXMPLE   = $('#lineChartExample');
-		var lineChartExample = new Chart(LINECHARTEXMPLE, {
-        type: 'line',
-            data: {
-                labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-                datasets: [
-                    {
-                        label: "溫度",
-                        fill: true,
-                        lineTension: 0.3,
-                        backgroundColor: "rgba(51, 179, 90, 0.38)",
-                        borderColor: brandPrimary,
-                        borderCapStyle: 'butt',
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        borderWidth: 1,
-                        pointBorderColor: brandPrimary,
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 1,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: brandPrimary,
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 2,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-			    		data: [<?php while ($cht = mysqli_fetch_array($tbt)){echo $cht[0].",";}?>],
-                        spanGaps: false
-                    },
-                    {
-                        label: "濕度",
-                        fill: true,
-                        lineTension: 0.3,
-                        backgroundColor: "rgba(75,192,192,0.4)",
-                        borderColor: "rgba(75,192,192,1)",
-                        borderCapStyle: 'butt',
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        borderWidth: 1,
-                        pointBorderColor: "rgba(75,192,192,1)",
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 1,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 2,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        data: [<?php while ($chh = mysqli_fetch_array($tbh)){echo $chh[0].",";}?>],
-                        spanGaps: false
-                    }
-                ]
-            }
-        });
-	
-    });
- </script>
+			/*所查詢位置詳細資料 Start*/
+			infowindow = new google.maps.InfoWindow({content:"<?php echo $Lo?>,<?php echo $La?>"});
+			infowindow.open(map, marker);
+			/*所查詢位置詳細資料 End*/
+		}
+		google.maps.event.addDomListener(window, 'load', init_map);
+		
+		/*溫溼度*/
+		$(document).ready(
+		function () { 'use strict';
+			var brandPrimary = 'rgba(51, 179, 90, 1)';
+			var LINECHARTEXMPLE   = $('#lineChartExample');
+			var lineChartExample = new Chart(LINECHARTEXMPLE, {
+			type: 'line',
+				data: {
+					labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+					datasets: [
+						{
+							label: "溫度(單位 °C)",
+							fill: true,
+							lineTension: 0.3,
+							backgroundColor: "rgba(51, 179, 90, 0.38)",
+							borderColor: brandPrimary,
+							borderCapStyle: 'butt',
+							borderDash: [],
+							borderDashOffset: 0.0,
+							borderJoinStyle: 'miter',
+							borderWidth: 1,
+							pointBorderColor: brandPrimary,
+							pointBackgroundColor: "#fff",
+							pointBorderWidth: 1,
+							pointHoverRadius: 5,
+							pointHoverBackgroundColor: brandPrimary,
+							pointHoverBorderColor: "rgba(220,220,220,1)",
+							pointHoverBorderWidth: 2,
+							pointRadius: 1,
+							pointHitRadius: 10,
+							data: [<?php while ($cht = mysqli_fetch_array($tbt)){echo $cht[0].",";}?>],
+							spanGaps: false
+						},
+						{
+							label: "濕度(單位: %)",
+							fill: true,
+							lineTension: 0.3,
+							backgroundColor: "rgba(75,192,192,0.4)",
+							borderColor: "rgba(75,192,192,1)",
+							borderCapStyle: 'butt',
+							borderDash: [],
+							borderDashOffset: 0.0,
+							borderJoinStyle: 'miter',
+							borderWidth: 1,
+							pointBorderColor: "rgba(75,192,192,1)",
+							pointBackgroundColor: "#fff",
+							pointBorderWidth: 1,
+							pointHoverRadius: 5,
+							pointHoverBackgroundColor: "rgba(75,192,192,1)",
+							pointHoverBorderColor: "rgba(220,220,220,1)",
+							pointHoverBorderWidth: 2,
+							pointRadius: 1,
+							pointHitRadius: 10,
+							data: [<?php while ($chh = mysqli_fetch_array($tbh)){echo $chh[0].",";}?>],
+							spanGaps: false
+						}
+					]
+				}
+			});
+		
+		});
+
+
+		// navbar 滑動特效
+		var menuScroll = function(){
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
+			});
+		};
+		$(function(){
+			menuScroll();
+		});
+
+	</script>
 
 	</body>
 </html>

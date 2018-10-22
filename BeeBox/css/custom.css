@@ -1,7 +1,7 @@
 /*設定gmap_canvas顯示區(寬與高)*/
 #gmap_canvas{
     width:100%;
-    height: 100%;
+    height: 400px;
 }
 
 .hivecolor{
