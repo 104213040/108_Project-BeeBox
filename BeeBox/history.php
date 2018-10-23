@@ -56,7 +56,7 @@
 
 	<!-- custom.css -->
 	<link rel="stylesheet" href="css/custom.css">
-
+    
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -104,7 +104,7 @@
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
 		<div class="col-md-7 col-md-push-1">
-		    <h3 style="font-family:Microsoft JhengHei;">溫溼度資料</h3>
+		    <h3 style="font-weight:bold;font-family:Microsoft JhengHei;">溫溼度資料</h3>
 		    <div class="card-body">
 	            <canvas id="lineChartExample"></canvas>
 		    </div>
@@ -113,9 +113,9 @@
 		    <table class="table table-striped table-hover">
 		        <thead>
 		        <tr>
-		        <th>日期時間<br> Time</th>
-		        <th>溫度<br> Temperature</th>
-	        	<th>濕度<br> Humidity</th>
+		        <th style="font-family:Microsoft JhengHei;font-size:18px;">日期時間</th>
+		        <th style="font-family:Microsoft JhengHei;font-size:18px;">溫度</th>
+	        	<th style="font-family:Microsoft JhengHei;font-size:18px;">濕度</th>
 	        	</tr>
 	        	</thead>
 	        	<tbody>
@@ -128,7 +128,7 @@
                 </tr><?php } ?>
             </tbody>
             </table>
-	</div>
+	    </div>
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
@@ -141,29 +141,29 @@
 	<div class="row">
     <div id="fh5co-work">
 			<div class="row">
-			<h3>聲音檔</h3>
+			<h3 style="font-weight:bold;font-family:Microsoft JhengHei;">聲音檔</h3>
 				<div class="col-md-4 text-center animate-box">
-				<h4>正常蜂箱</h4>
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 				<span>09061629</span>
 				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-				<h4>假失王蜂箱</h4>
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">假失王蜂箱</h4>
 				<span>09061629</span>
 				<a class="work" style="background-image: url(images/假失王.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-				<h4>正常蜂箱</h4>
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 				<span>09061629</span>
 				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-				<h4>正常蜂箱</h4>
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 				<span>09061629</span>
 				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-				<h4>正常蜂箱</h4>
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 				<span>09061629</span>
 				<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
