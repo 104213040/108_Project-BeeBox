@@ -1,6 +1,20 @@
+@@ -0,0 +1,202 @@
+<?php
+session_start();
+$_SESSION['uID'] = 0;
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<script type="text/javascript" language="javascript">
+     function CheckSession(){
+     var  a= '<%= Session["uID"].ToString() %>';
+		     if(a!=1){
+			     alert("invalid password");
+		     }
+     }
+
+</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Neat &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -85,7 +99,7 @@
 		</nav>
 	<div class="container-wrap" style="height:400px">
 
-	<div class="row">
+    	<div class="row">
 			<form class="col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8" style="padding: 5%;" method="post" action="login.php">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Username</label>
@@ -96,7 +110,7 @@
 					<label for="exampleInputPassword1">Password</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
 				</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary" id="submit" onclick="document.getElementById('submit')">Submit</button>
 			</form>
 
 </div>
