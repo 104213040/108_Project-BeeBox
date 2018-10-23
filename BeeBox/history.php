@@ -103,13 +103,13 @@
 <div class="container-wrap" id="TNH">
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
-		<div class="col-md-7 col-md-push-1">
-		    <h3 style="font-weight:bold;font-family:Microsoft JhengHei;">溫溼度資料</h3>
+		<div class="col-md-10 col-md-push-1">
+		    <h3 style="font-weight:bold;font-family:Microsoft JhengHei;font-size:25px;">溫溼度資料</h3>
 		    <div class="card-body">
 	            <canvas id="lineChartExample"></canvas>
 		    </div>
 		</div>
-		<div class="col-md-4 col-md-push-1">
+		<div class="col-md-10 col-md-push-1">
 		    <table class="table table-striped table-hover">
 		        <thead>
 		        <tr>
@@ -123,8 +123,8 @@
 				for($i=1;$i<=mysqli_num_rows($tbtnh);$i++){ 
 				    $rs=mysqli_fetch_row($tbtnh);?><tr>
                 <td><?php echo $rs[1]?></td>
-                <td><?php echo $rs[2]?></td>
-                <td><?php echo $rs[3]?></td>
+                <td><?php echo $rs[2]."°C"?></td>
+                <td><?php echo $rs[3]."%"?></td>
                 </tr><?php } ?>
             </tbody>
             </table>
