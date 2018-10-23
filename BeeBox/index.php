@@ -77,7 +77,6 @@
 			<div class="top-menu hivecolor">
 				<div class="row">
 					<div class="col-xs-6">
-
 						<div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
 					</div>
 					<div class="col-xs-12 text-right menu-1">
@@ -211,7 +210,7 @@
 			/*自行設定圖標 End*/
 
 			/*所查詢位置詳細資料 Start*/
-			infowindow = new google.maps.InfoWindow({content:"<?php echo $Lo?>,<?php echo $La?>"});
+			infowindow = new google.maps.InfoWindow({content:"我在這裡~"});
 			infowindow.open(map, marker);
 			/*所查詢位置詳細資料 End*/
 		}
