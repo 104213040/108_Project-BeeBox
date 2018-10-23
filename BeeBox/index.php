@@ -116,17 +116,21 @@
 					</div>
 					
 					<!-- 溫溼度及狀態 -->
-					<div class="col-md-12 row">
+					<div class="col-md-12 row ">
 						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo $Tp?>" data-speed="4000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">溫度°C</span>
 						</div>
 						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="4000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">濕度%</span>
 						</div>
 						<div class="col-md-4 text-center">
-							<span class="fh5co-counter ">良好</span>
+							<span class="fh5co-counter "><?php echo  '良好'  ?></span>
+							<span class="fh5co-counter-label">聲音狀態</span>
+						</div>
+						<div class="col-md-4  animate-box" ">
+							<span class="fh5co-counter "<?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>><?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  '異常' ;} else {echo  '良好' ;} ?></span>
 							<span class="fh5co-counter-label">蜜蜂狀態</span>
 						</div>
 					</div>
