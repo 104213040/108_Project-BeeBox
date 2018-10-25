@@ -1,10 +1,22 @@
+<?php
+session_start();
+$_SESSION['uID'] = 0;
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<script type="text/javascript" language="javascript">
+     function CheckSession(){
+     var  a= '<%= Session["uID"].ToString() %>';
+		     if(a!=1){
+			     alert("invalid password");
+		     }
+     }
+
+</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BEE BOX</title>
-	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
+	<title>Neat &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -70,109 +82,40 @@
 
 	<div class="fh5co-loader"></div>
 
-	<div id="page">
+   <div id="page">
 		<nav class="fh5co-nav" role="navigation">
 					<div class="container-wrap">
 						<div class="top-menu hivecolor">
 							<div class="row">
 								<div class="col-xs-6">
 
-						            <div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
-					            </div>
-								<div class="col-xs-12 text-right menu-1">
-									<ul>
-										<li><a href="index.php">最新數據</a></li>
-										<li class="has-dropdown"><a href="history.php">歷史資料</a></li>
-										<li class="active"><a href="aboutus.html">關於我們</a></li>
-
-									</ul>
+									<h1><div id="fh5co-logo"><a href="index.php"><img src="img/BTlogo.png" alt="person" class="img-fluid" /></a>Login</div></h1>
 								</div>
 							</div>
 
 						</div>
 					</div>
 		</nav>
-	<div class="container-wrap">
-		<aside id="fh5co-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(images/img_bg_3.jpg);">
-			   		<div class="overlay-gradient"></div>
-		   			<div class="row">
-			   			<div class="col-md-6 col-md-offset-3 slider-text slider-text-bg">
-			   				<div class="slider-text-inner text-center">
-			   					<h1 style="font-weight:bold;font-family:Microsoft JhengHei;">國立暨南國際大學</h1>
-									<h2 style="font-family:Microsoft JhengHei;">資訊管理系</h2>
-										<h2 style="font-family:Microsoft JhengHei;">108 級專題組 / BeeBox / Team 10</h2>
-			   				</div>
-			   			</div>
-			   		</div>
-					<div class="col-md-7 col-md-push-1">
-		                <p><img src = "img/groupphoto.jpg"></p>
-		            </div>
-		            <div class="col-md-4 col-md-push-1">
-		    
-	                </div>
-							
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-		<div id="fh5co-work">
-			<div class="row">
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-1.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
+	<div class="container-wrap" style="height:400px">
+
+    	<div class="row">
+			<form class="col-sm-10 col-sm-offset-1 col-md-offset-2 col-md-8" style="padding: 5%;" method="post" action="login.php">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="UserName" name="id">
+					<!--<small id="emailHelp" class="form-text text-muted">We'll never share your id with anyone else.</small>-->
 				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-2.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
 				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-4.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-5.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<a href="work-single.html" class="work" style="background-image: url(images/portfolio-6.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
+			<button type="submit" class="btn btn-primary" id="submit" onclick="document.getElementById('submit')">Submit</button>
+			</form>
+
+</div>
 	</div><!-- END container-wrap -->
-<!--site map
-	<div class="container-wrap">
+
+	<!--<div class="container-wrap">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
 				<div class="col-md-3 fh5co-widget">
@@ -212,14 +155,13 @@
 				</div>
 
 			</div>
--->
+
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2018 NCNU_BeeTeam. All Rights Reserved.</small>
-
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-<!--social icons and links
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -228,12 +170,11 @@
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
 					</p>
--->
 				</div>
 			</div>
-		
-	</div><!-- END container-wrap -->
-	
+		</footer>
+	</div><!--END container-wrap
+</div>-->
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>

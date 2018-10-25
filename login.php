@@ -1,4 +1,4 @@
-+<?php
+<?php
 /*
    session_start();
 	 $host = '163.22.17.251';
