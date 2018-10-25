@@ -4,9 +4,7 @@
     height: 400px;
 }
 
-.hivecolor{
-    background-color: #ffe538;
-}
+/* hivecolor加在style.css 118 行 */
 
 select {
     margin-bottom: 1em;

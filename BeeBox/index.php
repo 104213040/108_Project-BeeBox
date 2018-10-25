@@ -72,15 +72,15 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation" id="nav">
-		<div class="container-wrap">
-			<div class="top-menu hivecolor">
-				<div class="row">
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
+			<div class="top-menu">
+				<div class="row menu-0">
 					<div class="col-xs-6">
 
 						<div id="fh5co-logo"><a href="index.php"><img src="img/BTlogo.png" alt="person" class="img-fluid" /></a>草屯時代養蜂場</div>
 					</div>
-					<div class="col-xs-12 text-right menu-1">
+					<div class="col-xs-6 text-right menu-1">
 						<ul>
 							<li class="active"><a href="#Latest">最新數據</a></li>
 							<li class="has-dropdown"><a href="history.php" >歷史資料</a>

@@ -15,8 +15,11 @@ body {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
-  color: gray;
-  background: #0f5e7f;
+  color: rgb(216, 104, 0);
+  background: hsl(198, 79%, 28%);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 
 #page {
@@ -97,7 +100,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-nav {
-  margin: 5em 0 0 0;
+  margin: 0em 0 0 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
@@ -105,7 +111,11 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .fh5co-nav .top-menu {
-  padding: 34px 30px;
+  padding: 10px 30px;
+  background-image:url('../img/bg2.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .top-menu {
@@ -120,9 +130,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 600;
   font-family: "Source Sans Pro", sans-serif;
 }
-.fh5co-nav #fh5co-logo a span {
-  color: #66D37E;
-}
+
 .fh5co-nav a {
   padding: 5px 10px;
   color: #000;
@@ -279,6 +287,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  background:#e8e8e8;
 }
 
 .fh5co-video {
