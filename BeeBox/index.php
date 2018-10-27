@@ -63,7 +63,11 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+    <style type="text/css">
+    a {
+      font-family:Microsoft JhengHei;}
+	
+    </style>
 	</head>
 	<body>
 	<?php
@@ -81,9 +85,23 @@
 					</div>
 					<div class="col-xs-6 text-right menu-1">
 						<ul>
-							<li class="active"><a href="#Latest">最新數據</a></li>
-							<li class="has-dropdown"><a href="history.php" >歷史資料</a></li>
-                            <li><a href="aboutus.html">關於我們</a></li>
+							<li ><a></a></li>
+							<li ><a></a></li>
+                            <li></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<ul>
+							<li ><a></a></li>
+							<li ><a></a></li>
+                            <li></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<ul>
+							<li class="active"><a href="#Latest"style="font-size:25px;">最新數據</a></li>
+							<li class="has-dropdown"><a href="history.php"style="font-size:25px;" >歷史資料</a></li>
+                            <li><a href="aboutus.html"style="font-size:25px;">關於我們</a></li>
 						</ul>
 					</div>
 				</div>
@@ -111,11 +129,11 @@
 					<div class="col-md-12 row ">
 						<div class="col-md-4 text-center">
 							<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label"style="font-family:monospace;font-size:25px;">溫度°C</span>
+							<span class="fh5co-counter-label"style="font-family:Microsoft JhengHei;font-size:25px;">溫度°C</span>
 						</div>
 						<div class="col-md-4 text-center">
 							<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label"style="font-family:monospace;font-size:25px;">濕度%</span>
+							<span class="fh5co-counter-label"style="font-family:Microsoft JhengHei;font-size:25px;">濕度%</span>
 						</div>
 						<!--<div class="col-md-4 text-center">
 							<span class="fh5co-counter "><?php echo  '良好'  ?></span>

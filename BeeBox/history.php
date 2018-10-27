@@ -64,7 +64,11 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+    <style type="text/css">
+    a {
+      font-family:Microsoft JhengHei;}
+	
+    </style>
 	</head>
 	<body>
 		<?php
@@ -74,19 +78,32 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-		<nav class="fh5co-nav" role="navigation" id="nav">
-		<div class="container-wrap">
-			<div class="top-menu hivecolor">
-				<div class="row">
+		<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
+			<div class="top-menu">
+				<div class="row menu-0">
 					<div class="col-xs-6">
-
 						<div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
 					</div>
-					<div class="col-xs-12 text-right menu-1">
+					<div class="col-xs-6 text-right menu-1">
 						<ul>
-							<li class="has-dropdown"><a href="index.php">最新數據</a></li>
-							<li class="active"><a href="history.php" >歷史資料</a></li>
-                            <li><a href="aboutus.html">關於我們</a></li>
+							<li ><a></a></li>
+							<li ><a></a></li>
+                            <li></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<ul>
+							<li ><a></a></li>
+							<li ><a></a></li>
+                            <li></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<ul>
+							<li class="has-dropdown"><a href="index.php"style="font-size:25px;">最新數據</a></li>
+							<li class="active"><a href="history.php"style="font-size:25px;" >歷史資料</a></li>
+                            <li><a href="aboutus.html"style="font-size:25px;">關於我們</a></li>
 						</ul>
 					</div>
 				</div>
