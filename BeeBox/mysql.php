@@ -28,6 +28,12 @@
       $Tp = $data['Temperature'];
       $Hu = $data['Humidity'];
     }
+
+    //抓聲音Hz.RMS最後十筆
+    $tbHz_sql = 'SELECT * FROM `sound` ORDER BY `Time` DESC limit 10';
+    $tbHz = mysqli_query($link,$tbHz_sql);
+    
+
     //抓GPS最後十筆
     $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 10';
     $tbGPS = mysqli_query($link,$tbgps_sql);

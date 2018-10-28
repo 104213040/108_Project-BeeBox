@@ -72,71 +72,51 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
-		<div class="container-wrap ">
-			<div class="top-menu">
-				<div class="row menu-0">
-					<div class="col-xs-6">
-						<div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
-					</div>
-					<div class="col-xs-6 text-right menu-1">
-						<ul>
-							<li class="active"><a href="#Latest">最新數據</a></li>
-							<li class="has-dropdown"><a href="history.php" >歷史資料</a></li>
-                            <li><a href="aboutus.html">關於我們</a></li>
-						</ul>
-					</div>
-				</div>
+	
+	<?php
+    	include_once('./nav.html');
+  	?>
 
-			</div>
-		</div>
-	</nav>
 	<div class="container-wrap" id="Latest">
 		<div id="fh5co-counter" class="fh5co-counters">
 			<div class="row">
-				<!-- 左半邊數據顯示 -->
-				<div class="col-md-6">
-					<!-- 蜂箱選擇 -->
+				<!-- sensor數據顯示 -->
+				<div class="row col-md-6">
 					<div class="col-md-12 text-center animate-box"style="font-family:Microsoft JhengHei;font-size:18px;">
 						<p>目前顯示
 							<select id="selectbox" data-selected="">
 								<option value="" selected="selected">box1</option>
 								<option value="1">box2</option>
-								
 							</select>
 						</p>
 					</div>
-					
-					<!-- 溫溼度及狀態 -->
-					<div class="col-md-12 row ">
-						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label"style="font-family:monospace;font-size:25px;">溫度°C</span>
-						</div>
-						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label"style="font-family:monospace;font-size:25px;">濕度%</span>
-						</div>
-						<!--<div class="col-md-4 text-center">
-							<span class="fh5co-counter "><?php echo  '良好'  ?></span>
-							<span class="fh5co-counter-label">聲音狀態</span>
-						</div>-->
-						<div class="col-md-4  text-center" ">
-							<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  'color:red' ;} ?>"><?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  '異常' ;} else {echo  '良好' ;} ?></span>
-							<span class="fh5co-counter-label"style="font-family:Microsoft JhengHei;font-size:25px;">蜜蜂狀態</span>
-						</div>
+					<!-- 即時溫度 -->
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">溫度°C</span>
 					</div>
-					<div class="col-md-12">
-						<div class="text-center animate-box"style="font-size:20px;">
+					<!-- 即時濕度 -->
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">濕度%</span>
+					</div>
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  'color:red' ;} ?>"><?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  "異常" ;} else {echo "良好";} ?></span>
+							
+						<span class="fh5co-counter-label">蜜蜂狀態</span>
+					</div>
+					<!-- 最後更新時間 -->
+					<div class="col-md-12 text-center animate-box"style="font-size:20px;">
 						<p>最後更新時間: <?php echo $time?></p>
-						</div>
 					</div>
+
 				</div>
-				<!-- 右半邊 -->
-				<div class="col-md-6" >
-					<div id="gmap_canvas"></div>
+				<!-- gps.  -->
+				<div class="row col-md-6">
+						<div class="col-md-12" id="gmap_canvas"></div>
 				</div>
 			</div>
+					
 		</div>
 	</div><!-- END container-wrap -->
 			<div class="row copyright">

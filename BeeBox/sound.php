@@ -77,12 +77,12 @@
 	<?php
     	include_once('./nav.html');
   	?>
-  
-<div class="container-wrap" id="TNH">
+
+<div class="container-wrap" id="VOI">
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
 		<div class="col-md-10 col-md-push-1">
-		    <h3>溫溼度資料</h3>
+		    <h3>頻率分析</h3>
 		    <div class="card-body">
 	            <canvas id="lineChartExample"></canvas>
 		    </div>
@@ -92,22 +92,63 @@
 		        <thead>
 		        <tr>
 		        <th style="font-family:Microsoft JhengHei;font-size:18px;">日期時間</th>
-		        <th style="font-family:Microsoft JhengHei;font-size:18px;">溫度</th>
-	        	<th style="font-family:Microsoft JhengHei;font-size:18px;">濕度</th>
+		        <th style="font-family:Microsoft JhengHei;font-size:18px;">頻率</th>
+	        	<th style="font-family:Microsoft JhengHei;font-size:18px;">離差度</th>
 	        	</tr>
 	        	</thead>
 	        	<tbody>
 		        <?php
-				for($i=1;$i<=mysqli_num_rows($tbtnh);$i++){ 
-				    $rs=mysqli_fetch_row($tbtnh);?><tr>
+				for($i=1;$i<=mysqli_num_rows($tbHz);$i++){ 
+				    $rs=mysqli_fetch_row($tbHz);?><tr>
                 <td><?php echo $rs[1]?></td>
-                <td><?php echo $rs[2]."°C"?></td>
+                <td><?php echo $rs[2]."Hz"?></td>
                 <td><?php echo $rs[3]."%"?></td>
                 </tr><?php } ?>
             </tbody>
             </table>
 	    </div>
 	</div>
+	</footer>
+</div><!-- END container-wrap -->
+
+<div class="container-wrap">
+    <footer id="fh5co-footer" role="contentinfo">
+    <div class="row animate-box">
+            <h3>聲音檔分析</h3>
+            <div class="col-md-4 text-center">
+				<audio controls>
+                    <source src="audio/hive1queenless.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <div class="text-center animate-box">
+					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+					<span>09061629</span>
+					<a class="work" style="background-image: url(images/正常狀況.png);"></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<audio controls>
+                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                <div class="text-center animate-box">
+					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">假失王蜂箱</h4>
+					<span>09061629</span>
+					<a class="work" style="background-image: url(images/假失王.png);"></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<audio controls>
+                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                <div class="text-center animate-box">
+					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+					<span>09061629</span>
+					<a class="work" style="background-image: url(images/正常狀況.png);"></a>
+				</div>
+			</div>
+		</div>
 	</footer>
 </div><!-- END container-wrap -->
 			<div class="row copyright">
@@ -162,7 +203,7 @@
 				labels: [" ", "4小時前", " ", "3小時前", " ", "2小時前", " ", "1小時前", "30分鐘前", "現在"],
 				datasets: [
 					{
-						label: "溫度(單位 °C)",
+						label: "頻率(單位: Hz)",
 						fill: true,
 						lineTension: 0.3,
 						backgroundColor: "rgba(51, 179, 90, 0.38)",
@@ -185,7 +226,7 @@
 						spanGaps: false
 					},
 					{
-						label: "濕度(單位: %)",
+						label: "離差度(單位: %)",
 						fill: true,
 						lineTension: 0.3,
 						backgroundColor: "rgba(75,192,192,0.4)",
@@ -204,30 +245,13 @@
 						pointHoverBorderWidth: 2,
 						pointRadius: 1,
 						pointHitRadius: 10,
-						data: [<?php while ($chh = mysqli_fetch_array($tbh)){echo $chh[0].",";}?>],
+						data: [<?php while ($chh = mysqli_fetch_array($tbHz)){echo $chh[0].",";}?>],
 						spanGaps: false
 					}
 				]
 			}
 		});
 
-	});
-
-
-	// navbar 滑動特效
-	var menuScroll = function(){
-		$('a[href^="#"]').on('click', function(event) {
-			var target = $(this.getAttribute('href'));
-			if( target.length ) {
-				event.preventDefault();
-				$('html, body').stop().animate({
-					scrollTop: target.offset().top
-				}, 1000);
-			}
-		});
-	};
-	$(function(){
-		menuScroll();
 	});
 
 </script>
