@@ -63,7 +63,11 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+    <style type="text/css">
+    a {
+      font-family:Microsoft JhengHei;}
+	
+    </style>
 	</head>
 	<body>
 	<?php
@@ -72,13 +76,36 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	
-	<?php
-    	include_once('./nav.html');
-  	?>
+	<!-- nav -->
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
+			<div class="top-menu">
+				<div class="row menu-0">
+					<div class="col-xs-6">
+						<div id="fh5co-logo"><a href="index.php" ><img src="img/bt.png" alt="person" class="img-fluid"/></a><span>蜂箱監測系統</span></div>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<div>
+							<ul>
+								<li class="active"><a href="index.php">最新數據</a></li>
+								<li class="has-dropdown">
+									<a href="history.php" >歷史資料</a>
+									<ul class="dropdown">
+										<li><a href="history.php">溫溼度</a></li>
+										<li><a href="sound.php">聲音</a></li>
+									</ul>
+								</li>
+								<li><a href="aboutus.html">關於我們</a></li>
+							</ul>   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 	<div class="container-wrap" id="Latest">
-		<div id="fh5co-counter" class="fh5co-counters">
+		<div id="fh5co-counter" class="fh5co-counters animate-box">
 			<div class="row">
 				<!-- sensor數據顯示 -->
 				<div class="row col-md-6">
@@ -91,12 +118,12 @@
 						</p>
 					</div>
 					<!-- 即時溫度 -->
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center" title="正常值32-35°C">
 						<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">溫度°C</span>
 					</div>
 					<!-- 即時濕度 -->
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center" title="正常值35-75%">
 						<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">濕度%</span>
 					</div>
@@ -106,13 +133,13 @@
 						<span class="fh5co-counter-label">蜜蜂狀態</span>
 					</div>
 					<!-- 最後更新時間 -->
-					<div class="col-md-12 text-center animate-box"style="font-size:20px;">
+					<div class="col-md-12 text-center"style="font-size:20px;">
 						<p>最後更新時間: <?php echo $time?></p>
 					</div>
 
 				</div>
 				<!-- gps.  -->
-				<div class="row col-md-6">
+				<div class="row col-md-6 gps">
 						<div class="col-md-12" id="gmap_canvas"></div>
 				</div>
 			</div>
@@ -195,25 +222,6 @@
 			/*所查詢位置詳細資料 End*/
 		}
 		google.maps.event.addDomListener(window, 'load', init_map);
-
-
-
-		// navbar 滑動特效
-		// var menuScroll = function(){
-		// 	$('a[href^="#"]').on('click', function(event) {
-		// 		var target = $(this.getAttribute('href'));
-		// 		if( target.length ) {
-		// 			event.preventDefault();
-		// 			$('html, body').stop().animate({
-		// 				scrollTop: target.offset().top
-		// 			}, 1000);
-		// 		}
-		// 	});
-		// };
-		// $(function(){
-		// 	menuScroll();
-		// });
-
 	</script>
 
 	</body>

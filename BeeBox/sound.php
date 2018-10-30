@@ -74,20 +74,45 @@
 
 	<div id="page">
 	<!-- nav.html -->
-	<?php
-    	include_once('./nav.html');
-  	?>
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
+			<div class="top-menu">
+				<div class="row menu-0">
+					<div class="col-xs-6">
+						<div id="fh5co-logo"><a href="index.php" ><img src="img/bt.png" alt="person" class="img-fluid"/></a><span>蜂箱監測系統</span></div>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<div>
+							<ul>
+								<li><a href="index.php">最新數據</a></li>
+								<li class="has-dropdown active">
+									<a href="history.php" >歷史資料</a>
+									<ul class="dropdown">
+										<li><a href="history.php">溫溼度</a></li>
+										<li><a href="sound.php">聲音</a></li>
+									</ul>
+								</li>
+								<li><a href="aboutus.html">關於我們</a></li>
+							</ul>   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 <div class="container-wrap" id="VOI">
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
-		<div class="col-md-10 col-md-push-1">
-		    <h3>頻率分析</h3>
-		    <div class="card-body">
-	            <canvas id="lineChartExample"></canvas>
-		    </div>
+		<div class="col-md-12">
+			<h3>頻率分析</h3>
 		</div>
-		<div class="col-md-10 col-md-push-1">
+	</div>
+	<div class="row animate-box">
+		<div class="card-body col-md-6">
+	        <canvas id="lineChartExample"></canvas>
+	    </div>
+		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
 		        <thead>
 		        <tr>
@@ -98,11 +123,11 @@
 	        	</thead>
 	        	<tbody>
 		        <?php
-				for($i=1;$i<=mysqli_num_rows($tbHz);$i++){ 
-				    $rs=mysqli_fetch_row($tbHz);?><tr>
+				for($i=1;$i<=mysqli_num_rows($tbsound);$i++){ 
+				    $rs=mysqli_fetch_row($tbsound);?><tr>
                 <td><?php echo $rs[1]?></td>
                 <td><?php echo $rs[2]."Hz"?></td>
-                <td><?php echo $rs[3]."%"?></td>
+                <td><?php echo $rs[3]*$p."%"?></td>
                 </tr><?php } ?>
             </tbody>
             </table>
@@ -113,11 +138,15 @@
 
 <div class="container-wrap">
     <footer id="fh5co-footer" role="contentinfo">
-    <div class="row animate-box">
-            <h3>聲音檔分析</h3>
+	<div class="row animate-box">
+		<div class="col-md-12">
+			<h3>頻率分析</h3>
+		</div>
+	</div>
+    <div class="row animate-box">            
             <div class="col-md-4 text-center">
 				<audio controls>
-                    <source src="audio/hive1queenless.mp3" type="audio/mpeg">
+                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                   </audio>
                   <div class="text-center animate-box">
@@ -139,11 +168,11 @@
 			</div>
 			<div class="col-md-4">
 				<audio controls>
-                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
+                    <source src="audio/hive1queenless.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                 </audio>
                 <div class="text-center animate-box">
-					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">失王蜂箱</h4>
 					<span>09061629</span>
 					<a class="work" style="background-image: url(images/正常狀況.png);"></a>
 				</div>
@@ -192,7 +221,7 @@
 	
 
 	
-	/*溫溼度*/
+	/*聲音頻率RMS*/
 	$(document).ready(
 	function () { 'use strict';
 		var brandPrimary = 'rgba(51, 179, 90, 1)';
@@ -200,7 +229,7 @@
 		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
-				labels: [" ", "4小時前", " ", "3小時前", " ", "2小時前", " ", "1小時前", "30分鐘前", "現在"],
+				labels: ["3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
 				datasets: [
 					{
 						label: "頻率(單位: Hz)",
@@ -222,14 +251,14 @@
 						pointHoverBorderWidth: 2,
 						pointRadius: 1,
 						pointHitRadius: 10,
-						data: [<?php while ($cht = mysqli_fetch_array($tbt)){echo $cht[0].",";}?>],
+						data: [<?php while ($chz = mysqli_fetch_array($tbHz)){echo $chz[0].",";}?>],
 						spanGaps: false
 					},
 					{
 						label: "離差度(單位: %)",
 						fill: true,
 						lineTension: 0.3,
-						backgroundColor: "rgba(75,192,192,0.4)",
+						backgroundColor: "rgba(75,192,192,0)",
 						borderColor: "rgba(75,192,192,1)",
 						borderCapStyle: 'butt',
 						borderDash: [],
@@ -245,7 +274,7 @@
 						pointHoverBorderWidth: 2,
 						pointRadius: 1,
 						pointHitRadius: 10,
-						data: [<?php while ($chh = mysqli_fetch_array($tbHz)){echo $chh[0].",";}?>],
+						data: [<?php while ($chr = mysqli_fetch_array($tbRMS)){echo $chr[0]*$pp.",";}?>],
 						spanGaps: false
 					}
 				]

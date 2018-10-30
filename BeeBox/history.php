@@ -63,7 +63,11 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+    <style type="text/css">
+    a {
+      font-family:Microsoft JhengHei;}
+	
+    </style>
 	</head>
 	<body>
 		<?php
@@ -73,21 +77,46 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	<!-- nav.html -->
-	<?php
-    	include_once('./nav.html');
-  	?>
+	<!-- navbar -->
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
+			<div class="top-menu">
+				<div class="row menu-0">
+					<div class="col-xs-6">
+						<div id="fh5co-logo"><a href="index.php" ><img src="img/bt.png" alt="person" class="img-fluid"/></a><span>蜂箱監測系統</span></div>
+					</div>
+					<div class="col-xs-6 text-right menu-1">
+						<div>
+							<ul>
+								<li><a href="index.php">最新數據</a></li>
+								<li class="has-dropdown active">
+									<a href="history.php" >歷史資料</a>
+									<ul class="dropdown">
+										<li><a href="history.php">溫溼度</a></li>
+										<li><a href="sound.php">聲音</a></li>
+									</ul>
+								</li>
+								<li><a href="aboutus.html">關於我們</a></li>
+							</ul>   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
   
 <div class="container-wrap" id="TNH">
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
-		<div class="col-md-10 col-md-push-1">
+		<div class="col-md-12">
 		    <h3>溫溼度資料</h3>
-		    <div class="card-body">
-	            <canvas id="lineChartExample"></canvas>
-		    </div>
 		</div>
-		<div class="col-md-10 col-md-push-1">
+	</div>
+	<div class="row">
+		<div class="card-body col-md-6">
+	        <canvas id="lineChartExample"></canvas>
+	    </div>
+		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
 		        <thead>
 		        <tr>
@@ -159,7 +188,7 @@
 		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
-				labels: [" ", "4小時前", " ", "3小時前", " ", "2小時前", " ", "1小時前", "30分鐘前", "現在"],
+				labels: [ "3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
 				datasets: [
 					{
 						label: "溫度(單位 °C)",

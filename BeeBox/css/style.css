@@ -20,6 +20,8 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+  height: 100%;
+
 }
 
 #page {
@@ -1486,3 +1488,7 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.gps{
+  height:100%;
+}

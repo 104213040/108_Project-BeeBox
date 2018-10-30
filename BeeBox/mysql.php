@@ -30,9 +30,18 @@
     }
 
     //抓聲音Hz.RMS最後十筆
-    $tbHz_sql = 'SELECT * FROM `sound` ORDER BY `Time` DESC limit 10';
+    $tbsound_sql = 'SELECT * FROM `sound` ORDER BY `Time` DESC limit 10';
+    $tbsound = mysqli_query($link,$tbsound_sql);
+    $p=100;
+    $pp=10000;
+
+    //抓聲音Hz最後十筆
+    $tbHz_sql = 'SELECT `frequency` FROM `sound` ORDER BY `Time` DESC limit 5';
     $tbHz = mysqli_query($link,$tbHz_sql);
     
+    //抓RMS最後十筆
+    $tbRMS_sql = 'SELECT `RMS` FROM `sound` ORDER BY `Time` DESC limit 5';
+    $tbRMS = mysqli_query($link,$tbRMS_sql);
 
     //抓GPS最後十筆
     $tbgps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 10';
