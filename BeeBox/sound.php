@@ -146,35 +146,35 @@
     <div class="row animate-box">            
             <div class="col-md-4 text-center">
 				<audio controls>
-                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
+                    <source src="audio/rec09061628.wav.wav" type="audio/mpeg">
                   Your browser does not support the audio element.
                   </audio>
                   <div class="text-center animate-box">
 					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
-					<span>09061629</span>
-					<a class="work" style="background-image: url(images/正常狀況.png);"></a>
+					<span>rec09061628</span>
+					<a class="work" style="background-image: url(images/rec09061628.wav.wav-power[800_10000].png);"></a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<audio controls>
-                    <source src="audio/hive2withqueen.mp3" type="audio/mpeg">
+                    <source src="audio/rec09061629.wav.wav" type="audio/mpeg">
                   Your browser does not support the audio element.
                 </audio>
                 <div class="text-center animate-box">
-					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">假失王蜂箱</h4>
-					<span>09061629</span>
-					<a class="work" style="background-image: url(images/假失王.png);"></a>
+					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+					<span>rec09061629</span>
+					<a class="work" style="background-image: url(images/rec09061629.wav.wav-power[800_10000].png);"></a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<audio controls>
-                    <source src="audio/hive1queenless.mp3" type="audio/mpeg">
+                    <source src="audio/rec09061632.wav.wav" type="audio/mpeg">
                   Your browser does not support the audio element.
                 </audio>
                 <div class="text-center animate-box">
 					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">失王蜂箱</h4>
-					<span>09061629</span>
-					<a class="work" style="background-image: url(images/正常狀況.png);"></a>
+					<span>rec09061632</span>
+					<a class="work" style="background-image: url(images/rec09061632.wav.wav-power[800_10000].png);"></a>
 				</div>
 			</div>
 		</div>
@@ -226,7 +226,7 @@
 	function () { 'use strict';
 		var brandPrimary = 'rgba(51, 179, 90, 1)';
 		var LINECHARTEXMPLE   = $('#lineChartExample');
-		var lineChartExample = new Chart(LINECHARTEXMPLE, {
+		var lineChartExample = new Chart(lineECHARTEXMPLE, {
 		type: 'line',
 			data: {
 				labels: ["3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
