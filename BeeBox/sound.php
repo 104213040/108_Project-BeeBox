@@ -226,7 +226,7 @@
 	function () { 'use strict';
 		var brandPrimary = 'rgba(51, 179, 90, 1)';
 		var LINECHARTEXMPLE   = $('#lineChartExample');
-		var lineChartExample = new Chart(lineECHARTEXMPLE, {
+		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
 				labels: ["3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
