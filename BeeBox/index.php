@@ -89,7 +89,7 @@
 							<ul>
 								<li class="active"><a href="index.php">最新數據</a></li>
 								<li class="has-dropdown">
-									<a href="history.php" >歷史資料</a>
+									<a>歷史資料</a>
 									<ul class="dropdown">
 										<li><a href="history.php">溫溼度</a></li>
 										<li><a href="sound.php">聲音</a></li>

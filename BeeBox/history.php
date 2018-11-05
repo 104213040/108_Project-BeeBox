@@ -90,7 +90,7 @@
 							<ul>
 								<li><a href="index.php">最新數據</a></li>
 								<li class="has-dropdown active">
-									<a href="history.php" >歷史資料</a>
+									<a>歷史資料</a>
 									<ul class="dropdown">
 										<li><a href="history.php">溫溼度</a></li>
 										<li><a href="sound.php">聲音</a></li>
@@ -136,6 +136,19 @@
             </tbody>
             </table>
 	    </div>
+	</div>
+	</footer>
+</div><!-- END container-wrap -->
+<div class="container-wrap" id="TNH">
+	<footer id="fh5co-footer" role="contentinfo">
+	<div class="row">
+		<div class="col-md-12">
+		    <h3>溫溼度判斷</h3>
+		</div>
+	</div>
+	<div class="row">
+		
+	</div>
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
