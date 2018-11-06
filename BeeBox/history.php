@@ -115,6 +115,11 @@
 	<div class="row">
 		<div class="card-body col-md-6">
 	        <canvas id="lineChartExample"></canvas>
+			<!-- <p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p> -->
+			<dl class="dl-horizontal text-center" style="font-family:Microsoft JhengHei;font-size:18px;color:red;">
+  				<dt>正常範圍</dt>
+  				<dd>溫度32~35°C / 濕度35~75%</dd>
+			</dl>
 	    </div>
 		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
@@ -139,19 +144,7 @@
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
-<div class="container-wrap" id="TNH">
-	<footer id="fh5co-footer" role="contentinfo">
-	<div class="row">
-		<div class="col-md-12">
-		    <h3>溫溼度判斷</h3>
-		</div>
-	</div>
-	<div class="row">
-		
-	</div>
-	</div>
-	</footer>
-</div><!-- END container-wrap -->
+
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
@@ -201,7 +194,7 @@
 		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
-				labels: [ "3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
+				labels: ["45分前", "40分前", "35分前", "30分前", "25分前", "20分前", "15分前", "10分前", "5分前", "現在"],
 				datasets: [
 					{
 						label: "溫度(單位 °C)",

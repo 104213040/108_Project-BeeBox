@@ -105,12 +105,16 @@
 	<footer id="fh5co-footer" role="contentinfo">
 	<div class="row">
 		<div class="col-md-12">
-			<h3>頻率分析</h3>
+			<h3>音頻資料</h3>
 		</div>
 	</div>
 	<div class="row animate-box">
 		<div class="card-body col-md-6">
 	        <canvas id="lineChartExample"></canvas>
+			<dl class="dl-horizontal text-center" style="font-family:Microsoft JhengHei;font-size:18px;color:red;">
+  				<dt>正常範圍</dt>
+  				<dd>頻率: 190~285 Hz</dd>
+			</dl>
 	    </div>
 		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
@@ -140,7 +144,7 @@
     <footer id="fh5co-footer" role="contentinfo">
 	<div class="row animate-box">
 		<div class="col-md-12">
-			<h3>頻率分析</h3>
+			<h3>音頻分析</h3>
 		</div>
 	</div>
     <div class="row animate-box">            
@@ -178,18 +182,6 @@
 				</div>
 			</div>
 		</div>
-	</footer>
-</div><!-- END container-wrap -->
-<div class="container-wrap" id="VOI">
-	<footer id="fh5co-footer" role="contentinfo">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>音頻分析依據</h3>
-		</div>
-	</div>
-	<div class="row animate-box">
-		
-	</div>
 	</footer>
 </div><!-- END container-wrap -->
 			<div class="row copyright">
@@ -241,7 +233,7 @@
 		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
-				labels: ["3小時前", "2小時前", "1小時前", "30分鐘前", "現在"],
+				labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
 				datasets: [
 					{
 						label: "頻率(單位: Hz)",
