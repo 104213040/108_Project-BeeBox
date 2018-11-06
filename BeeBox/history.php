@@ -113,13 +113,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="card-body col-md-6">
+		<div class="card-body col-md-6" style="height:100%">
 	        <canvas id="lineChartExample"></canvas>
-			<!-- <p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p> -->
-			<dl class="dl-horizontal text-center" style="font-family:Microsoft JhengHei;font-size:18px;color:red;">
-  				<dt>正常範圍</dt>
-  				<dd>溫度32~35°C / 濕度35~75%</dd>
-			</dl>
 	    </div>
 		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
@@ -141,6 +136,11 @@
             </tbody>
             </table>
 	    </div>
+		<div class="text-left col-md-6" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
+			<p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p>
+  				<!-- <dt>正常範圍</dt>
+  				<dd>溫度32~35°C / 濕度35~75%</dd> -->
+		</div>
 	</div>
 	</footer>
 </div><!-- END container-wrap -->

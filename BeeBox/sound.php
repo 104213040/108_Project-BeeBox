@@ -111,10 +111,6 @@
 	<div class="row animate-box">
 		<div class="card-body col-md-6">
 	        <canvas id="lineChartExample"></canvas>
-			<dl class="dl-horizontal text-center" style="font-family:Microsoft JhengHei;font-size:18px;color:red;">
-  				<dt>正常範圍</dt>
-  				<dd>頻率: 190~285 Hz</dd>
-			</dl>
 	    </div>
 		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
@@ -136,6 +132,9 @@
             </tbody>
             </table>
 	    </div>
+		<div class="text-left col-md-6" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
+			<p class="text-center text-error">正常值: 頻率190~285 Hz</p>
+		</div>
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
