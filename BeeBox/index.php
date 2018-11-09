@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>BEE BOX</title>
-	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/mapmarker.png" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -202,7 +202,7 @@
 
 			/*自行設定圖標 Start*/
 			var image = {
-				url: 'img/map_marker.png', /*自定圖標檔案位置或網址*/
+				url: 'img/mapmarker.png', /*自定圖標檔案位置或網址*/
 				// This marker is 20 pixels wide by 32 pixels high.
 				size: new google.maps.Size(50, 50), /*自定圖標大小*/
 				// The origin for this image is (0, 0).
