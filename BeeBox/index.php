@@ -217,6 +217,17 @@
 			});
 			/*自行設定圖標 End*/
 
+			marker0 = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(24.00616,120.805), /*草屯時代養蜂場經緯度位置*/
+				icon: image
+			});
+			marker0 = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(23.9559,120.9793), /*宏基養蜂場經緯度位置*/
+				icon: image
+			});
+
 			/*所查詢位置詳細資料 Start*/
 			infowindow = new google.maps.InfoWindow({content:'<div class="label" style="font-family:Microsoft JhengHei; font-size:18px; font-weight:bold; color:#f3a204;"><a href="history.php"><span>&nbsp&nbsp</span><img src="img/marker.png"/></a></div>'});
 			infowindow.open(map, marker);
