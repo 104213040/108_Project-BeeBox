@@ -52,11 +52,11 @@
     $tbtnh = mysqli_query($link,$tbtnh_sql);
 
 	//抓溫度最後十筆
-    $tbt_sql = 'SELECT `Temperature` FROM `TNH` ORDER BY `Time` limit 10';
+    $tbt_sql = 'SELECT `Temperature` FROM `TNH` ORDER BY `Time` DESC limit 10';
     $tbt = mysqli_query($link,$tbt_sql);
 
 	//抓濕度最後十筆
-    $tbh_sql = 'SELECT `Humidity` FROM `TNH` ORDER BY `Time` limit 10';
+    $tbh_sql = 'SELECT `Humidity` FROM `TNH` ORDER BY `Time` DESC limit 10';
     $tbh = mysqli_query($link,$tbh_sql);
 
     //更新時間

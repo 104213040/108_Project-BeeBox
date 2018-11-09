@@ -96,6 +96,7 @@
 										<li><a href="sound.php">聲音</a></li>
 									</ul>
 								</li>
+								<li><a href="teach.html">探索聲音</a></li>
 								<li><a href="aboutus.html">關於我們</a></li>
 							</ul>   
 						</div>
@@ -114,7 +115,11 @@
 	</div>
 	<div class="row">
 		<div class="card-body col-md-6" style="height:100%">
-	        <canvas id="lineChartExample"></canvas>
+			<canvas id="lineChartExample"></canvas>
+			<canvas id="t"></canvas>
+			<div class="text-left" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
+				<p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p>
+			</div>			
 	    </div>
 		<div class="col-md-6">
 		    <table class="table table-striped table-hover">
@@ -135,12 +140,9 @@
                 </tr><?php } ?>
             </tbody>
             </table>
-	    </div>
-		<div class="text-left col-md-6" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
-			<p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p>
-  				<!-- <dt>正常範圍</dt>
-  				<dd>溫度32~35°C / 濕度35~75%</dd> -->
 		</div>
+		
+		
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
@@ -186,12 +188,12 @@
 	
 
 	
-	/*溫溼度*/
+	/*溫度*/
 	$(document).ready(
 	function () { 'use strict';
 		var brandPrimary = 'rgba(51, 179, 90, 1)';
-		var LINECHARTEXMPLE   = $('#lineChartExample');
-		var lineChartExample = new Chart(LINECHARTEXMPLE, {
+		var L   = $('#t');
+		var line = new Chart(L, {
 		type: 'line',
 			data: {
 				labels: ["45分前", "40分前", "35分前", "30分前", "25分前", "20分前", "15分前", "10分前", "5分前", "現在"],
@@ -220,6 +222,38 @@
 						spanGaps: false
 					},
 					{
+						label: "溫度上限標準(36°C)",
+						fill: true,
+						lineTension: 0.3,
+						borderColor: "red",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						borderWidth: 1,
+						pointBorderColor: "red",
+						pointBackgroundColor: "red",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBorderColor: "red",
+						pointHoverBorderWidth: 2,
+						pointRadius: 1,
+						pointHitRadius: 10,
+						pointStyle: 'line',
+						data: ["36", "36", "36", "36", "36", "36", "36", "36", "36", "36"],
+						spanGaps: false,
+						backgroundColor: "rgba(75,192,192,0)",
+					}
+				]
+			}
+		});
+		var LINECHARTEXMPLE   = $('#lineChartExample');
+		var lineChartExample = new Chart(LINECHARTEXMPLE, {
+		type: 'line',
+			data: {
+				labels: ["45分前", "40分前", "35分前", "30分前", "25分前", "20分前", "15分前", "10分前", "5分前", "現在"],
+				datasets: [
+					{
 						label: "濕度(單位: %)",
 						fill: true,
 						lineTension: 0.3,
@@ -241,12 +275,144 @@
 						pointHitRadius: 10,
 						data: [<?php while ($chh = mysqli_fetch_array($tbh)){echo $chh[0].",";}?>],
 						spanGaps: false
+					},
+					{
+						label: "濕度上限標準(90%)",
+						fill: true,
+						lineTension: 0.3,
+						borderColor: "red",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						borderWidth: 1,
+						pointBorderColor: "red",
+						pointBackgroundColor: "red",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBorderColor: "red",
+						pointHoverBorderWidth: 2,
+						pointRadius: 1,
+						pointHitRadius: 10,
+						pointStyle: 'line',
+						data: ["90", "90", "90", "90", "90", "90", "90", "90", "90", "90"],
+						spanGaps: false,
+						backgroundColor: "rgba(75,192,192,0)",
 					}
 				]
 			}
 		});
 
 	});
+
+	// /*溼度*/
+	// $(document).ready(
+	// function () { 'use strict';
+	// 	var brandPrimary = 'rgba(51, 179, 90, 1)';
+	// 	var LINECHARTEXMPLE   = $('#lineChartExample');
+	// 	var lineChartExample = new Chart(LINECHARTEXMPLE, {
+	// 	type: 'line',
+	// 		data: {
+	// 			labels: ["45分前", "40分前", "35分前", "30分前", "25分前", "20分前", "15分前", "10分前", "5分前", "現在"],
+	// 			datasets: [
+	// 				{
+	// 					label: "溫度(單位 °C)",
+	// 					fill: true,
+	// 					lineTension: 0.3,
+	// 					backgroundColor: "rgba(51, 179, 90, 0.38)",
+	// 					borderColor: brandPrimary,
+	// 					borderCapStyle: 'butt',
+	// 					borderDash: [],
+	// 					borderDashOffset: 0.0,
+	// 					borderJoinStyle: 'miter',
+	// 					borderWidth: 1,
+	// 					pointBorderColor: brandPrimary,
+	// 					pointBackgroundColor: "#fff",
+	// 					pointBorderWidth: 1,
+	// 					pointHoverRadius: 5,
+	// 					pointHoverBackgroundColor: brandPrimary,
+	// 					pointHoverBorderColor: "rgba(220,220,220,1)",
+	// 					pointHoverBorderWidth: 2,
+	// 					pointRadius: 1,
+	// 					pointHitRadius: 10,
+	// 					data: [<?php while ($cht = mysqli_fetch_array($tbt)){echo $cht[0].",";}?>],
+	// 					spanGaps: false
+	// 				},
+	// 				{
+	// 					label: "濕度(單位: %)",
+	// 					fill: true,
+	// 					lineTension: 0.3,
+	// 					backgroundColor: "rgba(75,192,192,0.4)",
+	// 					borderColor: "rgba(75,192,192,1)",
+	// 					borderCapStyle: 'butt',
+	// 					borderDash: [],
+	// 					borderDashOffset: 0.0,
+	// 					borderJoinStyle: 'miter',
+	// 					borderWidth: 1,
+	// 					pointBorderColor: "rgba(75,192,192,1)",
+	// 					pointBackgroundColor: "#fff",
+	// 					pointBorderWidth: 1,
+	// 					pointHoverRadius: 5,
+	// 					pointHoverBackgroundColor: "rgba(75,192,192,1)",
+	// 					pointHoverBorderColor: "rgba(220,220,220,1)",
+	// 					pointHoverBorderWidth: 2,
+	// 					pointRadius: 1,
+	// 					pointHitRadius: 10,
+	// 					data: [<?php while ($chh = mysqli_fetch_array($tbh)){echo $chh[0].",";}?>],
+	// 					spanGaps: false
+	// 				},
+	// 				{
+	// 					label: "濕度上限標準(90%)",
+	// 					fill: true,
+	// 					lineTension: 0.3,
+	// 					borderColor: "red",
+	// 					borderCapStyle: 'butt',
+	// 					borderDash: [],
+	// 					borderDashOffset: 0.0,
+	// 					borderJoinStyle: 'miter',
+	// 					borderWidth: 1,
+	// 					pointBorderColor: "red",
+	// 					pointBackgroundColor: "red",
+	// 					pointBorderWidth: 1,
+	// 					pointHoverRadius: 5,
+	// 					pointHoverBorderColor: "red",
+	// 					pointHoverBorderWidth: 2,
+	// 					pointRadius: 1,
+	// 					pointHitRadius: 10,
+	// 					pointStyle: 'line',
+	// 					data: ["90", "90", "90", "90", "90", "90", "90", "90", "90", "90"],
+	// 					spanGaps: false,
+	// 					backgroundColor: "rgba(75,192,192,0)",
+	// 				},
+	// 				{
+	// 					label: "濕度上限標準(36°C)",
+	// 					fill: true,
+	// 					lineTension: 0.3,
+	// 					borderColor: "#FFE538",
+	// 					borderCapStyle: 'butt',
+	// 					borderDash: [],
+	// 					borderDashOffset: 0.0,
+	// 					borderJoinStyle: 'miter',
+	// 					borderWidth: 1,
+	// 					pointBorderColor: "#FFE538",
+	// 					pointBackgroundColor: "#FFE538",
+	// 					pointBorderWidth: 1,
+	// 					pointHoverRadius: 5,
+	// 					pointHoverBorderColor: "#FFE538",
+	// 					pointHoverBorderWidth: 2,
+	// 					pointRadius: 1,
+	// 					pointHitRadius: 10,
+	// 					pointStyle: 'line',
+	// 					data: ["36", "36", "36", "36", "36", "36", "36", "36", "36", "36"],
+	// 					spanGaps: false
+	// 				}
+	// 			]
+	// 		}
+	// 	});
+
+	// });
+
+
 
 
 	// navbar 滑動特效
