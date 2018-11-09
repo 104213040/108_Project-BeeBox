@@ -95,6 +95,7 @@
 										<li><a href="sound.php">聲音</a></li>
 									</ul>
 								</li>
+								<li><a href="teach.html">探索聲音</a></li>
 								<li><a href="aboutus.html">關於我們</a></li>
 							</ul>   
 						</div>
