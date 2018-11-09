@@ -218,7 +218,7 @@
 			/*自行設定圖標 End*/
 
 			/*所查詢位置詳細資料 Start*/
-			infowindow = new google.maps.InfoWindow({content:"我在這裡~"});
+			infowindow = new google.maps.InfoWindow({content:'<div class="label" style="font-family:Microsoft JhengHei; font-size:18px; font-weight:bold; color:#f3a204;"><span>&nbsp &nbsp</span><img src="img/beehive.png"/></a><span>&nbsp在這裡！</span></div>'});
 			infowindow.open(map, marker);
 			/*所查詢位置詳細資料 End*/
 		}
