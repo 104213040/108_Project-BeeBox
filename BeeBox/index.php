@@ -119,17 +119,17 @@
 						</p>
 					</div>
 					<!-- 即時溫度 -->
-					<div class="col-md-4 text-center" title="正常值32-35°C">
-						<span class="fh5co-counter js-counter" <?php if ($Tp<32 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
+					<div class="col-md-4 text-center" title="正常值14-35°C">
+						<span class="fh5co-counter js-counter" <?php if ($Tp<14 or $Tp>35) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Tp" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">溫度°C</span>
 					</div>
 					<!-- 即時濕度 -->
-					<div class="col-md-4 text-center" title="正常值35-75%">
-						<span class="fh5co-counter js-counter" <?php if ($Hu<35 or $Hu>75) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
+					<div class="col-md-4 text-center" title="正常值40-90%">
+						<span class="fh5co-counter js-counter" <?php if ($Hu<40 or $Hu>90) {echo  'style="color:red"' ;} ?>data-from="0" data-to="<?php echo "$Hu" ?>" data-speed="1000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">濕度%</span>
 					</div>
 					<div class="col-md-4 text-center">
-						<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  'color:red' ;} ?>"><?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  "異常" ;} else {echo "良好";} ?></span>
+						<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<14 or $Tp>35 or $Hu<40 or $Hu>90) {echo  'color:red' ;} ?>"><?php if ($Tp<14 or $Tp>35 or $Hu<40 or $Hu>90) {echo  "異常" ;} else {echo "良好";} ?></span>
 							
 						<span class="fh5co-counter-label">蜜蜂狀態</span>
 					</div>

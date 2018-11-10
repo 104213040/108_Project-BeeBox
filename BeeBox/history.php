@@ -118,7 +118,7 @@
 			<canvas id="lineChartExample"></canvas>
 			<canvas id="t"></canvas>
 			<div class="text-left" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
-				<p class="text-center text-error">正常值: 溫度32~35°C / 濕度35~75%</p>
+				<p class="text-center text-error">正常值: 溫度14~35°C / 濕度40~90%</p>
 			</div>			
 	    </div>
 		<div class="col-md-6">
@@ -222,7 +222,7 @@
 						spanGaps: false
 					},
 					{
-						label: "溫度上限標準(36°C)",
+						label: "溫度上限標準(35°C)",
 						fill: true,
 						lineTension: 0.3,
 						borderColor: "red",
@@ -240,7 +240,7 @@
 						pointRadius: 1,
 						pointHitRadius: 10,
 						pointStyle: 'line',
-						data: ["36", "36", "36", "36", "36", "36", "36", "36", "36", "36"],
+						data: ["35", "35", "35", "35", "35", "35", "35", "35", "35", "35"],
 						spanGaps: false,
 						backgroundColor: "rgba(75,192,192,0)",
 					}
