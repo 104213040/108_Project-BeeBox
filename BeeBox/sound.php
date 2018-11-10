@@ -122,7 +122,6 @@
 		        <tr>
 		        <th style="font-family:Microsoft JhengHei;font-size:18px;">日期時間</th>
 		        <th style="font-family:Microsoft JhengHei;font-size:18px;">頻率</th>
-	        	<th style="font-family:Microsoft JhengHei;font-size:18px;">離差度</th>
 	        	</tr>
 	        	</thead>
 	        	<tbody>
@@ -131,7 +130,6 @@
 				    $rs=mysqli_fetch_row($tbsound);?><tr>
                 <td><?php echo $rs[1]?></td>
                 <td><?php echo $rs[2]."Hz"?></td>
-                <td><?php echo $rs[3]*$p."%"?></td>
                 </tr><?php } ?>
             </tbody>
             </table>
@@ -226,7 +224,7 @@
 	
 
 	
-	/*聲音頻率RMS*/
+	/*聲音頻率*/
 	$(document).ready(
 	function () { 'use strict';
 		var brandPrimary = 'rgba(51, 179, 90, 1)';
@@ -234,7 +232,7 @@
 		var lineChartExample = new Chart(LINECHARTEXMPLE, {
 		type: 'line',
 			data: {
-				labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+				labels: ["45分前", "40分前", "35分前", "30分前", "25分前", "20分前", "15分前", "10分前", "5分前", "現在"],
 				datasets: [
 					{
 						label: "頻率(單位: Hz)",
@@ -259,29 +257,6 @@
 						data: [<?php while ($chz = mysqli_fetch_array($tbHz)){echo $chz[0].",";}?>],
 						spanGaps: false
 					},
-					{
-						label: "離差度(單位: %)",
-						fill: true,
-						lineTension: 0.3,
-						backgroundColor: "rgba(75,192,192,0)",
-						borderColor: "rgba(75,192,192,1)",
-						borderCapStyle: 'butt',
-						borderDash: [],
-						borderDashOffset: 0.0,
-						borderJoinStyle: 'miter',
-						borderWidth: 1,
-						pointBorderColor: "rgba(75,192,192,1)",
-						pointBackgroundColor: "#fff",
-						pointBorderWidth: 1,
-						pointHoverRadius: 5,
-						pointHoverBackgroundColor: "rgba(75,192,192,1)",
-						pointHoverBorderColor: "rgba(220,220,220,1)",
-						pointHoverBorderWidth: 2,
-						pointRadius: 1,
-						pointHitRadius: 10,
-						data: [<?php while ($chr = mysqli_fetch_array($tbRMS)){echo $chr[0]*$pp.",";}?>],
-						spanGaps: false
-					}
 				]
 			}
 		});
