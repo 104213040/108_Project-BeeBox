@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>BEE BOX</title>
-	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/mapmarker.png" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -111,9 +111,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h3>我們可以從聲音了解到什麼?</h3>
-			<p>從蜜蜂發出的聲音頻率可以看出一些與蜂箱內蜂群的健康和行為有關的微妙跡象。藉由這些跡象可以幫助養蜂人照顧蜜蜂，調整蜂箱。目前我們依照蜂箱內的狀態分成兩類，分別是正常狀態與失王狀態。</p>
+			<p>從蜜蜂發出的聲音頻率可以看出一些與蜂群健康和行為有關的跡象。藉由這些跡象可以幫助養蜂人照顧蜜蜂，調整蜂箱。目前我們的團隊因為取得數據有限，僅將狀態依照兩種狀態進行分類，分別是正常狀態與失王狀態。</p>
 			<h3>如何觀察聲音?</h3>
-			<p>首先，透過BeeBox取得蜂箱內的聲音，________分析方法</p>
+			<p>首先，透過BeeBox取得蜂箱內的聲音後，便可利用手邊的分析工具將音檔轉換成較容易觀察的頻譜圖與功率圖，進而得知蜜蜂聲音的分貝以及大致頻率。以下將介紹三種分析圖，並說明正常蜂箱與失王蜂箱的差異性。</p>
 		</div>
 	</div>
 	<div class="row">
@@ -122,46 +122,28 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="fh5co-blog animate-box">
-					<a href="#" class="blog-bg" style="background-image: url(images/blog-1.jpg);"></a>
+					<a href="#" class="blog-bg" style="background-image: url(img/audacity.png); background-size: 100% 100%"></a>
 					<div class="blog-text">
-						<span class="posted_on">Feb. 15th 2016</span>
-						<h3><a href="#">Photoshoot On The Street</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="stuff">
-							<li><i class="icon-heart3"></i>249</li>
-							<li><i class="icon-eye2"></i>1,308</li>
-							<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-						</ul>
+						<h3><a href="#">Audacity 頻譜圖</a></h3>
+						<p>X軸為頻率，單位為赫茲(Hz)；Y軸為分貝，單位是分貝(dB)。圖中範例為正常蜂箱分析之結果。當蜂箱內缺少蜂王時，蜂箱的頻率會較不一致，意即紫色區塊較不集中。</p>
 					</div> 
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="fh5co-blog animate-box">
-					<a href="#" class="blog-bg" style="background-image: url(images/blog-2.jpg);"></a>
+					<a href="#" class="blog-bg" style="background-image: url(img/spectrum.png);background-size: 100% 100%"></a>
 					<div class="blog-text">
-						<span class="posted_on">Feb. 15th 2016</span>
-						<h3><a href="#">Surfing at Philippines</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="stuff">
-							<li><i class="icon-heart3"></i>249</li>
-							<li><i class="icon-eye2"></i>1,308</li>
-							<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-						</ul>
+						<h3><a href="sound.php">Sox 功率圖</a></h3>
+						<p>X軸為頻率，Y軸為功率，是每單位時間所銷後的能量，單位是瓦(W)。根據文獻探討與數據同步對照，正常蜂箱的頻率大致落在200 - 350 Hz 的範圍，也就是說我們可以觀察功率圖，從較高的功率去推論這個蜂箱是不是健康的蜂箱。</p>
 					</div> 
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="fh5co-blog animate-box">
-					<a href="#" class="blog-bg" style="background-image: url(images/blog-3.jpg);"></a>
+					<a href="#" class="blog-bg" style="background-image: url(img/missing.jpg);background-size: 100% 100%"></a>
 					<div class="blog-text">
-						<span class="posted_on">Feb. 15th 2016</span>
-						<h3><a href="#">Focus On Uderwater</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="stuff">
-							<li><i class="icon-heart3"></i>249</li>
-							<li><i class="icon-eye2"></i>1,308</li>
-							<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-						</ul>
+						<h3><a href="#">Sox 頻率圖</a></h3>
+						<p>X軸為時間，單位秒(S)，Y軸為頻率，單位赫茲(Hz)，顏色的深淺表示聲音能量在該頻率範圍的大小。由黑色無能量，到能量最高的白色，從圖中可得知一個蜂箱大致頻率落在的區間，判斷他是否異常。</p>
 					</div> 
 				</div>
 			</div>

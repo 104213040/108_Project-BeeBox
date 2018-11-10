@@ -12,7 +12,6 @@
     $gps_sql  = 'SELECT * FROM `GPS` ORDER BY `Time` DESC limit 1';
     $GPS = mysqli_query($link,$gps_sql);
     while ($data = mysqli_fetch_array($GPS)){
-      $time = $data['Time'];
       $Lo = $data['Longitude'];
       $La = $data['Latitude'];
       // echo "<font color='blue'>{$data['Longitude']}</font>";
@@ -25,6 +24,7 @@
     $tnh_sql = 'SELECT * FROM `TNH` ORDER BY `Time` DESC limit 1';
     $TNH = mysqli_query($link,$tnh_sql);
     while ($data = mysqli_fetch_array($TNH)){
+      $time = $data['Time'];
       $Tp = $data['Temperature'];
       $Hu = $data['Humidity'];
     }

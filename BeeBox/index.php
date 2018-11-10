@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>BEE BOX</title>
-	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/mapmarker.png" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -129,7 +129,7 @@
 							<span class="fh5co-counter-label">濕度%</span>
 					</div>
 					<div class="col-md-4 text-center">
-						<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<32 or $Tp>35 or $Hu<35 or $Hu>75) {echo  'color:red' ;} ?>"><?php if ($Tp<14 or $Tp>35 or $Hu<40 or $Hu>90) {echo  "異常" ;} else {echo "良好";} ?></span>
+						<span class="fh5co-counter " style="font-family:Microsoft JhengHei;<?php if ($Tp<14 or $Tp>35 or $Hu<40 or $Hu>90) {echo  'color:red' ;} ?>"><?php if ($Tp<14 or $Tp>35 or $Hu<40 or $Hu>90) {echo  "異常" ;} else {echo "良好";} ?></span>
 							
 						<span class="fh5co-counter-label">蜜蜂狀態</span>
 					</div>
@@ -202,7 +202,7 @@
 
 			/*自行設定圖標 Start*/
 			var image = {
-				url: 'img/map_marker.png', /*自定圖標檔案位置或網址*/
+				url: 'img/mapmarker.png', /*自定圖標檔案位置或網址*/
 				// This marker is 20 pixels wide by 32 pixels high.
 				size: new google.maps.Size(50, 50), /*自定圖標大小*/
 				// The origin for this image is (0, 0).
@@ -217,8 +217,19 @@
 			});
 			/*自行設定圖標 End*/
 
+			marker0 = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(24.00616,120.805), /*草屯時代養蜂場經緯度位置*/
+				icon: image
+			});
+			marker0 = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(23.9559,120.9793), /*宏基養蜂場經緯度位置*/
+				icon: image
+			});
+
 			/*所查詢位置詳細資料 Start*/
-			infowindow = new google.maps.InfoWindow({content:"我在這裡~"});
+			infowindow = new google.maps.InfoWindow({content:'<div class="label" style="font-family:Microsoft JhengHei; font-size:18px; font-weight:bold; color:#f3a204;"><a href="history.php"><span>&nbsp&nbsp</span><img src="img/marker.png"/></a></div>'});
 			infowindow.open(map, marker);
 			/*所查詢位置詳細資料 End*/
 		}
