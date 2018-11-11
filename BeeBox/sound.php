@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>BEE BOX</title>
-	<link rel="shortcut icon" href="img/map_marker.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/mapmarker.png" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -113,7 +113,7 @@
 		<div class="card-body col-md-6">
 			<canvas id="lineChartExample"></canvas>
 			<div class="text-left col-md-12" style="font-family:Microsoft JhengHei;font-size:15px;color:red;">
-			<p class="text-center text-error">正常值: 頻率190~285 Hz</p>
+			<p class="text-center text-error">正常值: 頻率190~350Hz</p>
 			</div>
 	    </div>
 		<div class="col-md-6">
@@ -155,7 +155,8 @@
                   <div class="text-center animate-box">
 					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 					<span>rec09061628</span>
-					<a class="work" style="background-image: url(images/rec09061628.wav.wav-power[800_10000].png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-spectrogram.png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-power.png);"></a>
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -166,7 +167,8 @@
                 <div class="text-center animate-box">
 					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
 					<span>rec09061629</span>
-					<a class="work" style="background-image: url(images/rec09061629.wav.wav-power[800_10000].png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-spectrogram.png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-power.png);"></a>
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -177,7 +179,8 @@
                 <div class="text-center animate-box">
 					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">失王蜂箱</h4>
 					<span>rec09061632</span>
-					<a class="work" style="background-image: url(images/rec09061632.wav.wav-power[800_10000].png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-spectrogram.png);"></a>
+					<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-power.png);"></a>
 				</div>
 			</div>
 		</div>
