@@ -13,7 +13,7 @@
 body {
   font-family: "Oxygen", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   color: rgb(216, 104, 0);
   background: hsl(198, 79%, 28%);
@@ -495,7 +495,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-blog,
 #fh5co-counter,
 #fh5co-footer {
-  padding: 6em 3em;
+  padding: 3em 3em;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -730,6 +730,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-blog .blog-text h3 a {
   color: black;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .blog-flex {

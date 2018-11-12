@@ -25,3 +25,8 @@ select {
   font-family:Microsoft JhengHei;
   font-size:25px;
 }
+
+.teach p{
+  font-size: 20px;
+  color: black;
+}
