@@ -139,26 +139,6 @@
 	</footer>
 </div><!-- END container-wrap -->
 
-<div class="container-wrap">
-    <footer id="fh5co-footer" role="contentinfo">
-	<div class="row animate-box">
-		<div class="col-md-12">
-			<h3>音頻分析</h3>
-		</div>
-	</div>
-    
-	</footer>
-</div><!-- END container-wrap -->
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2018 BeeTeam. All Rights Reserved.</small>
-					</p>
-
-				</div>
-			</div>		
-</div>
-
 
 
 
