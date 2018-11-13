@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -71,7 +72,7 @@
 	</head>
 	<body class="overflow">
 	<?php
-		include 'mysql.php' ;
+		include 'mysql2.php' ;
 	?>
 	<div class="fh5co-loader"></div>
 	
@@ -85,12 +86,12 @@
 					</div>
 					<div class="col-xs-12 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.php">最新數據</a></li>
+							<li class="active"><a href="index2.php">最新數據</a></li>
 							<li class="has-dropdown">
-								<a href="history.php">歷史資料</a>
+								<a href="history2.php">歷史資料</a>
 								<ul class="dropdown">
-									<li><a href="history.php">溫溼度</a></li>
-									<li><a href="sound.php">聲音</a></li>
+									<li><a href="history2.php">溫溼度</a></li>
+									<li><a href="sound2.php">聲音</a></li>
 								</ul>
 							</li>
 							<li><a href="teach.html">探索聲音</a></li>
@@ -112,8 +113,8 @@
 					<div class="col-md-12 text-center animate-box"style="font-family:Microsoft JhengHei;font-size:18px;">
 						<p>目前顯示
 							<select id="selectbox" data-selected=""  onchange="location = this.value;">
-								<option value="index.php" selected="selected">box1</option>
-								<option value="index2.php">box2</option>
+								<option value="index.php">box1</option>
+								<option value="index2.php" selected="selected">box2</option>
 							</select>
 						</p>
 					</div>
