@@ -146,44 +146,7 @@
 			<h3>音頻分析</h3>
 		</div>
 	</div>
-    <div class="row animate-box">            
-            <div class="col-md-4 text-center">
-				<audio controls>
-                    <source src="audio/rec09061628.wav.wav" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                  </audio>
-                  <div class="text-center animate-box">
-					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
-					<span>rec09061628</span>
-					<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-spectrogram.png);"></a>
-					<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-power.png);"></a>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<audio controls>
-                    <source src="audio/rec09061629.wav.wav" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-                <div class="text-center animate-box">
-					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
-					<span>rec09061629</span>
-					<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-spectrogram.png);"></a>
-					<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-power.png);"></a>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<audio controls>
-                    <source src="audio/rec09061632.wav.wav" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-                <div class="text-center animate-box">
-					<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">失王蜂箱</h4>
-					<span>rec09061632</span>
-					<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-spectrogram.png);"></a>
-					<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-power.png);"></a>
-				</div>
-			</div>
-		</div>
+    
 	</footer>
 </div><!-- END container-wrap -->
 			<div class="row copyright">

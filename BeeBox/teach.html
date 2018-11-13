@@ -119,10 +119,12 @@
 	<div class="row">
 	</div>
 	<div id="fh5co-blog">
+		<!-- <div><input type="button" class="btn btn-default" value="查看聲音檔" onclick="location.href = 'https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI';"></div> -->
+		<div class="row text-center"><input type="button" class="btn btn-default" value="查看聲音檔" onclick="window.open('https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI')"></div>
 		<div class="row">
 			<div class="col-md-4">
 				<div class="fh5co-blog animate-box">
-					<a href="#https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI" class="blog-bg" style="background-image: url(img/audacity.png); background-size: 100% 100%"></a>
+					<a href="https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI" class="blog-bg" style="background-image: url(img/audacity.png); background-size: 100% 100%"></a>
 					<div class="blog-text">
 						<h3><a href="https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI">Audacity 頻譜圖</a></h3>
 						<p>X軸為頻率，單位為赫茲(Hz)；Y軸為分貝，單位是分貝(dB)。當蜂箱內缺少蜂王時，蜂箱的頻率會較不一致，聲音會較模糊，意即紫色區塊較不集中。</p>
@@ -149,7 +151,44 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="row animate-box">
+		<div class="col-md-4 text-center">
+			<audio controls>
+				<source src="audio/rec09061628.wav.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  <div class="text-center animate-box">
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+				<span>rec09061628</span>
+				<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-spectrogram.png);"></a>
+				<a class="work" style="background-image: url(audiopng/rec09061628.wav.wav-power.png);"></a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<audio controls>
+				<source src="audio/rec09061629.wav.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			</audio>
+			<div class="text-center animate-box">
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">正常蜂箱</h4>
+				<span>rec09061629</span>
+				<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-spectrogram.png);"></a>
+				<a class="work" style="background-image: url(audiopng/rec09061629.wav.wav-power.png);"></a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<audio controls>
+				<source src="audio/rec09061632.wav.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			</audio>
+			<div class="text-center animate-box">
+				<h4 style="font-size:18px;font-family:Microsoft JhengHei;font-weight:normal;">失王蜂箱</h4>
+				<span>rec09061632</span>
+				<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-spectrogram.png);"></a>
+				<a class="work" style="background-image: url(audiopng/rec11092205.wav.wav-power.png);"></a>
+			</div>
+		</div>
+	</div>
 
 
 
