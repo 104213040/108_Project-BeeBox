@@ -69,41 +69,46 @@
 	
     </style>
 	</head>
-	<body class="overflow">
+	<body>
+		<?php
+		    $database = 'pi';
+			include 'mysql.php' ;
+		?>
 	<div class="fh5co-loader"></div>
 
-	<div class="fh5co-loader"></div>
-	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation" id="nav">
-		<div class="container-wrap">
+	<!-- navbar -->
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
 			<div class="top-menu">
-				<div class="row">
+				<div class="row menu-0">
 					<div class="col-xs-6">
-						<div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
+						<div id="fh5co-logo"><a href="index.php" ><img src="img/bt.png" alt="person" class="img-fluid"/></a><span>蜂箱監測系統</span></div>
 					</div>
-					<div class="col-xs-12 text-right menu-1">
-						<ul>
-							<li><a href="index.php">最新數據</a></li>
-							<li class="has-dropdown">
-								<a href="history.php">歷史資料</a>
-								<ul class="dropdown">
-									<li><a href="history.php">溫溼度</a></li>
-									<li><a href="sound.php">聲音</a></li>
-								</ul>
-							</li>
-							<li class="active"><a href="teach.html">探索聲音</a></li>
-							<li><a href="aboutus.html">關於我們</a></li>
-						</ul>
+					<div class="col-xs-6 text-right menu-1">
+						<div>
+							<ul>
+								<li><a href="index.php">最新數據</a></li>
+								<li class="has-dropdown">
+									<a>歷史資料</a>
+									<ul class="dropdown">
+										<li><a href="history.php">溫溼度</a></li>
+										<li><a href="sound.php">聲音</a></li>
+									</ul>
+								</li>
+								<li><a href="teach.html" class="active">探索聲音</a></li>
+								<li><a href="aboutus.html">關於我們</a></li>
+							</ul>   
+						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</nav>
+  
 <div class="container-wrap" id="TNH">
 	<footer id="fh5co-footer" role="contentinfo">
-	<div class="row animate-box">
+	<div class="row">
 		<div class="col-md-12">
 			<h3>我們可以從聲音了解到什麼?</h3>
 			<p>從蜜蜂發出的聲音頻率可以看出一些與蜂群健康和行為有關的跡象。藉由這些跡象可以幫助養蜂人照顧蜜蜂，判斷蜂群是否遭受疾病、寄生蟲侵襲，或是遇到女王蜂離巢、分蜂等狀態。目前我們的團隊因為取得數據有限，僅將狀態依照兩種狀態進行分類，分別是正常狀態與失王狀態。</p>
@@ -111,8 +116,9 @@
 			<p>首先，透過BeeBox取得蜂箱內的聲音後，便可利用分析工具將音檔轉換成較容易觀察的頻譜圖與功率圖，進而得知蜜蜂聲音的分貝以及大致頻率。以下將介紹三種分析圖，並說明正常蜂箱與失王蜂箱的差異性。三種圖可互相對照，您將會有不一樣的發現！</p>
 		</div>
 	</div>
-
-	<div id="fh5co-blog" class="animate-box">
+	<div class="row">
+	</div>
+	<div id="fh5co-blog">
 		<!-- <div><input type="button" class="btn btn-default" value="查看聲音檔" onclick="location.href = 'https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI';"></div> -->
 		<div class="row text-center"><input type="button" class="btn btn-default" value="查看聲音檔" onclick="window.open('https://drive.google.com/folderview?id=1W6oLOB3ttd3gfRbEIp47tE5CPf5gUbbI')"></div>
 		<div class="row">

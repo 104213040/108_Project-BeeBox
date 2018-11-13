@@ -886,10 +886,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
-.img-fluid{
-  height: 80px;
-  weight:80px;
-}
+
 .contact-info {
   margin-bottom: 4em;
   padding: 0;

@@ -65,7 +65,7 @@
 	<![endif]-->
 
 	</head>
-	<body class="overflow">
+	<body>
 		<?php
 		    $database = 'pi';
 			include 'mysql.php' ;
@@ -139,7 +139,16 @@
 	</footer>
 </div><!-- END container-wrap -->
 
-
+<div class="container-wrap">
+    <footer id="fh5co-footer" role="contentinfo">
+	<div class="row animate-box">
+		<div class="col-md-12">
+			<h3>音頻分析</h3>
+		</div>
+	</div>
+    
+	</footer>
+</div><!-- END container-wrap -->
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>

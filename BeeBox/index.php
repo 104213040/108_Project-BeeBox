@@ -69,40 +69,41 @@
 	
     </style>
 	</head>
-	<body class="overflow">
+	<body>
 	<?php
 		include 'mysql.php' ;
 	?>
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation" id="nav">
-		<div class="container-wrap">
+	<!-- nav -->
+	<nav class="fh5co-nav hivecolor" role="navigation" id="nav">
+		<div class="container-wrap ">
 			<div class="top-menu">
-				<div class="row">
+				<div class="row menu-0">
 					<div class="col-xs-6">
-						<div id="fh5co-logo"><a href="index.php" ><img src="img/BTlogo.png" alt="person" class="img-fluid"/></a><span style="font-family:Microsoft JhengHei;color:black;font-size:50px;">蜂箱監測系統</span></div>
+						<div id="fh5co-logo"><a href="index.php" ><img src="img/bt.png" alt="person" class="img-fluid"/></a><span>蜂箱監測系統</span></div>
 					</div>
-					<div class="col-xs-12 text-right menu-1">
-						<ul>
-							<li class="active"><a href="index.php">最新數據</a></li>
-							<li class="has-dropdown">
-								<a href="history.php">歷史資料</a>
-								<ul class="dropdown">
-									<li><a href="history.php">溫溼度</a></li>
-									<li><a href="sound.php">聲音</a></li>
-								</ul>
-							</li>
-							<li><a href="teach.html">探索聲音</a></li>
-							<li><a href="aboutus.html">關於我們</a></li>
-						</ul>
+					<div class="col-xs-6 text-right menu-1">
+						<div>
+							<ul>
+								<li class="active"><a href="index.php">最新數據</a></li>
+								<li class="has-dropdown">
+									<a>歷史資料</a>
+									<ul class="dropdown">
+										<li><a href="history.php">溫溼度</a></li>
+										<li><a href="sound.php">聲音</a></li>
+									</ul>
+								</li>
+								<li><a href="teach.html">探索聲音</a></li>
+								<li><a href="aboutus.html">關於我們</a></li>
+							</ul>   
+						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</nav>
-
 
 	<div class="container-wrap" id="Latest">
 		<div id="fh5co-counter" class="fh5co-counters animate-box">
