@@ -65,7 +65,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body class="overflow">
 		<?php
 		    $database = 'pi';
 			include 'mysql.php' ;
@@ -138,6 +138,17 @@
 	</div>
 	</footer>
 </div><!-- END container-wrap -->
+
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2018 BeeTeam. All Rights Reserved.</small>
+					</p>
+
+				</div>
+			</div>		
+</div>
 
 
 
